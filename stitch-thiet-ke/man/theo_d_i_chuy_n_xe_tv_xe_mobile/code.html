@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;min-height:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#213145", "outline": "#6e7a74", "on-error": "#ffffff", "tertiary-fixed-dim": "#ffb95f", "primary-container": "#0b7a5e", "primary-fixed": "#98f5d2", "on-error-container": "#93000a", "on-secondary": "#ffffff", "on-primary-fixed": "#002117", "on-primary-fixed-variant": "#00513d", "surface-dim": "#cbdbf5", "on-primary-container": "#a7ffdd", "error": "#ba1a1a", "on-surface-variant": "#3e4944", "on-tertiary-fixed-variant": "#653e00", "on-tertiary": "#ffffff", "secondary-fixed": "#6ffbbe", "on-secondary-fixed-variant": "#005236", "on-secondary-container": "#00714d", "surface-container-lowest": "#ffffff", "inverse-primary": "#7cd8b6", "surface-container": "#e5eeff", "surface-variant": "#d3e4fe", "surface-tint": "#006c52", "surface-container-highest": "#d3e4fe", "on-primary": "#ffffff", "secondary-container": "#6cf8bb", "on-secondary-fixed": "#002113", "on-background": "#0b1c30", "surface-container-low": "#eff4ff", "surface-container-high": "#dce9ff", "primary": "#005f48", "on-surface": "#0b1c30", "surface-bright": "#f8f9ff", "on-tertiary-fixed": "#2a1700", "inverse-on-surface": "#eaf1ff", "outline-variant": "#bdc9c2", "tertiary": "#764900", "error-container": "#ffdad6", "tertiary-fixed": "#ffddb8", "on-tertiary-container": "#ffead5", "background": "#f8f9ff", "tertiary-container": "#975f00", "surface": "#f8f9ff", "secondary-fixed-dim": "#4edea3", "secondary": "#006c49", "primary-fixed-dim": "#7cd8b6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2.5rem", "margin": "2rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "gutter": "1.5rem" }, fontFamily: { "label-lg": ["Be Vietnam Pro"], "label-md": ["Be Vietnam Pro"], "body-lg": ["Be Vietnam Pro"], "body-sm": ["Be Vietnam Pro"], "headline-lg": ["Be Vietnam Pro"], "display": ["Be Vietnam Pro"], "headline-sm": ["Be Vietnam Pro"], "body-md": ["Be Vietnam Pro"], "display-mobile": ["Be Vietnam Pro"], "label-sm": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"] }, fontSize: { "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center min-w-0 gap-space-xs"><button aria-label="Quay lại" class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back_ios_new</span></button><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><h1 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate leading-tight">Theo Dõi Chuyến Xe</h1><div class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded-full bg-secondary-container/70"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-secondary-container uppercase tracking-wider font-semibold">Trực tiếp</span></div></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Cập nhật theo thời gian thực</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Hỗ trợ khẩn cấp" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">headset_mic</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full relative pb-safe">
+<!-- Immersive Live Route Map Section -->
+<div class="relative w-full h-[360px] overflow-hidden select-none bg-surface-container-high">
+<!-- Map Background Simulation with Route Overlay -->
+<div class="w-full h-full bg-cover bg-center" data-location="Bảo Lộc, Lâm Đồng, Vietnam" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZAewpMCoHg6IuEgPFSNRlOKuGiw-h23MnYjlCTiue-Eip83tmjt9JTgnuFWpbHAtXrcrGXrWZDSBFEyftvCWEuZg_S_yGkKbu_RMn1vOyKKmAr5wYxrIfwJM4YFnsPxPBaFdsLBme__aznhiAKsR4WEnVyzqS7nefzC2Ysmt7ykNDGe-U3CuifIqzQZA0PtPZ4ZUJrmpBhmBz1NhLxm09NUFRS5aDoEhiY4bcBRA')"></div>
+<!-- Soft Ambient Darkening & Contrast Scrim -->
+<div class="absolute inset-0 bg-gradient-to-b from-inverse-surface/40 via-transparent to-surface pointer-events-none"></div>
+<!-- Stylized Map Route Canvas / Decorative Vectors -->
+<div class="absolute inset-0 pointer-events-none">
+<svg class="w-full h-full" fill="none" viewbox="0 0 390 360" xmlns="http://www.w3.org/2000/svg">
+<!-- Completed path (TP.HCM -> Madagui) -->
+<path d="M 40 330 C 80 280, 110 240, 160 210" opacity="0.6" stroke="#0b7a5e" stroke-dasharray="1 0" stroke-linecap="round" stroke-width="5"></path>
+<!-- Active Path (Madagui -> Bao Loc -> Da Lat) -->
+<path class="animate-pulse" d="M 160 210 C 205 185, 230 145, 270 115 C 310 85, 330 65, 345 35" stroke="#005f48" stroke-dasharray="7 6" stroke-linecap="round" stroke-width="5"></path>
+</svg>
+</div>
+<!-- Floating Passed Station Pin: BX Miền Đông -->
+<div class="absolute bottom-8 left-6 flex items-center gap-1.5 opacity-75">
+<div class="w-3.5 h-3.5 rounded-full bg-surface-dim flex items-center justify-center shadow-sm">
+<div class="w-1.5 h-1.5 rounded-full bg-outline"></div>
+</div>
+<span class="font-label-sm text-label-sm text-surface-container-lowest font-medium px-2 py-0.5 rounded-full bg-inverse-surface/80 backdrop-blur-sm shadow-sm">TP.HCM (Đã qua)</span>
+</div>
+<!-- Dynamic Next Stop Pin: Bảo Lộc with Floating Popover -->
+<div class="absolute top-[100px] right-[75px] z-10 flex flex-col items-center">
+<!-- Highlighted Popover Pill -->
+<div class="flex items-center gap-1.5 bg-surface-container-lowest text-primary px-2.5 py-1 rounded-full shadow-lg mb-1.5 animate-bounce">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container animate-spin" style="animation-duration: 4s;">schedule</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Dự kiến 02:20 <span class="text-primary font-bold">(40p nữa)</span></span>
+</div>
+<!-- Pin Anchor -->
+<div class="relative flex items-center justify-center">
+<span class="w-4 h-4 rounded-full bg-tertiary-fixed animate-ping absolute"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container shadow-md"></span>
+</div>
+<span class="mt-1 font-label-sm text-label-sm font-bold text-surface-container-lowest px-2 py-0.5 rounded-full bg-primary shadow-sm">Trạm Bảo Lộc</span>
+</div>
+<!-- Live Vehicle Marker (Active between Madagui & Bao Loc) -->
+<div class="absolute top-[188px] left-[150px] z-20 -translate-x-1/2 -translate-y-1/2 cursor-pointer group" onclick="pulseVehicle()">
+<!-- Radar Waves -->
+<div class="relative flex items-center justify-center">
+<span class="absolute w-14 h-14 rounded-full bg-primary/25 animate-ping"></span>
+<span class="absolute w-10 h-10 rounded-full bg-secondary-container/50 animate-pulse"></span>
+<!-- Bus Icon Container -->
+<div class="relative w-9 h-9 rounded-full bg-primary shadow-xl flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">directions_bus</span>
+</div>
+</div>
+<!-- Speed Tag Pill -->
+<div class="absolute top-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-inverse-surface/90 text-surface-bright px-2 py-0.5 rounded-full shadow-md flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">64 km/h</span>
+</div>
+</div>
+<!-- Destination Pin: BX Đà Lạt -->
+<div class="absolute top-6 right-8 flex items-center gap-1.5">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-surface-container-lowest px-2.5 py-1 rounded-full bg-inverse-surface/85 backdrop-blur-sm shadow-sm">BX Đà Lạt</span>
+</div>
+<!-- Floating Top Bar Map Status Controls -->
+<div class="absolute top-3 left-4 right-4 flex items-center justify-between pointer-events-auto z-10">
+<!-- Traffic Condition Pill -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Độ thông thoáng: Tốt</span>
+</div>
+<!-- Quick Share Route Link -->
+<button aria-label="Chia sẻ lộ trình" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md text-primary hover:bg-surface-container transition-colors shadow-sm active:scale-95" onclick="shareTrip()">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span class="font-label-sm text-label-sm font-semibold">Chia sẻ</span>
+</button>
+</div>
+<!-- Floating Map Action Cluster (Bottom Right of Map Area) -->
+<div class="absolute bottom-6 right-4 flex flex-col gap-2 z-10">
+<button aria-label="Định vị xe" class="w-10 h-10 rounded-full bg-surface-container-lowest text-primary shadow-md flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">my_location</span>
+</button>
+<div class="flex flex-col rounded-full bg-surface-container-lowest shadow-md overflow-hidden">
+<button aria-label="Phóng to" class="w-10 h-9 flex items-center justify-center text-on-surface hover:bg-surface-container active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button aria-label="Thu nhỏ" class="w-10 h-9 flex items-center justify-center text-on-surface hover:bg-surface-container active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Interactive Tracking Sheet Container -->
+<div class="flex-1 -mt-4 bg-surface rounded-t-3xl shadow-[0_-8px_24px_rgba(11,28,48,0.06)] relative z-20 px-gutter-mobile pt-3 pb-8 flex flex-col gap-space-md">
+<!-- Draggable Drag Handle -->
+<div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto"></div>
+<!-- Sheet Header: Trip Identity & Freshness Indicator -->
+<div class="flex items-start justify-between gap-space-sm pt-1">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Phù Sa Express</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Ghế A05</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="font-semibold text-on-surface">51B-892.45</span>
+<span>•</span>
+<span class="truncate">Khởi hành lúc 22:00</span>
+</div>
+</div>
+<!-- Real-time freshness badge -->
+<div class="flex flex-col items-end shrink-0">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-medium">GPS 10s trước</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline mt-1">Đang truyền tín hiệu</span>
+</div>
+</div>
+<!-- Key Metrics Bento (2 Columns) -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Next Stop Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[18px]">turn_sharp_right</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Điểm kế tiếp</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Bảo Lộc</p>
+<div class="flex items-center gap-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">timer</span>
+<span>~40 phút <span class="text-outline font-normal">(28 km)</span></span>
+</div>
+</div>
+</div>
+<!-- ETA Card -->
+<div class="bg-surface-container-lowest p-space-sm rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-1.5 text-secondary mb-1">
+<span class="material-symbols-outlined text-[18px]">flag</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">Dự kiến đến</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<p class="font-headline-sm text-headline-sm text-primary font-bold leading-tight">05:30</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Sáng mai</span>
+</div>
+<div class="flex items-center gap-1 mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-secondary">check_circle</span>
+<span class="truncate">Đúng giờ dự kiến</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Overall Journey Progress Component -->
+<div class="bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold">Tiến độ chuyến đi</span>
+<span class="text-primary font-bold">Đã đi 60% <span class="text-on-surface-variant font-normal">(185/305 km)</span></span>
+</div>
+<!-- Linear visual track -->
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary to-primary-container" style="width: 60%;"></div>
+</div>
+<!-- Journey Stations Horizontal Flow -->
+<div class="grid grid-cols-4 gap-1 pt-1.5 text-center">
+<!-- Stop 1: Finished -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary mb-1">
+<span class="material-symbols-outlined text-[12px] font-bold">check</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-snug">BX Miền Đông</span>
+<span class="font-label-sm text-label-sm text-outline">22:00</span>
+</div>
+<!-- Stop 2: Finished -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary mb-1">
+<span class="material-symbols-outlined text-[12px] font-bold">check</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-snug">Dầu Giây</span>
+<span class="font-label-sm text-label-sm text-outline">23:45</span>
+</div>
+<!-- Stop 3: Next -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center mb-1 animate-pulse">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-tertiary-container leading-snug">Bảo Lộc</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">02:20</span>
+</div>
+<!-- Stop 4: Final Destination -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-outline flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+</div>
+<span class="font-label-sm text-label-sm font-medium text-on-surface-variant leading-snug">BX Đà Lạt</span>
+<span class="font-label-sm text-label-sm text-outline">05:30</span>
+</div>
+</div>
+</div>
+<!-- Quick Driver Card & Vehicle Profile -->
+<div class="bg-surface-container-low p-space-sm rounded-2xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Chân dung tài xế xe khách đường dài thân thiện, mặc áo sơ mi đồng phục chỉnh tề, mỉm cười ấm áp và chuyên nghiệp trong ánh sáng xe khách ấm cúng." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA84iFfkwAjIiP4H3fqxCEa6ku3Yo3dwGH00WAbXnV782RD28TikoBQQnh-TA18Wbj6D53sy35IZ3a3q__owWA6Yk3WkTODeyEpeIQXh2Hs1_EyyKBK3ReDrqeEYY5y05e6DKYe8OCLVkA5PXozlLs1Qyx7d7QcJbQX1OgySNiR-Wf01-n5ujn70Tr6gcrfaLpwqDXrGp5PSJtWW9BWc0iJh1Wf89Osa1PI4jcZCAU"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Trần Văn Hùng</span>
+<div class="flex items-center text-tertiary-container text-xs font-semibold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Biển số: 51B-892.45 (Limousine 34 phòng)</span>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-1">
+<a aria-label="Gọi nhanh tài xế" class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" href="tel:19008888">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</a>
+</div>
+</div>
+<!-- QR Ticket Quick Link Strip -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl flex items-center justify-between shadow-sm cursor-pointer hover:bg-surface-container-low transition-colors" onclick="openQrModal()">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Xem cuống vé QR lên xe</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mã vé: PVX-782910-HCMDL</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</div>
+<!-- Call to Action Buttons -->
+<div class="flex flex-col gap-space-xs mt-1">
+<div class="grid grid-cols-2 gap-space-sm">
+<a class="h-12 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.98]" href="tel:19008888">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>Gọi tài xế</span>
+</a>
+<button class="h-12 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm hover:bg-surface-container transition-all active:scale-[0.98]" onclick="shareTrip()">
+<span class="material-symbols-outlined text-[20px]">share_location</span>
+<span>Chia sẻ lộ trình</span>
+</button>
+</div>
+<!-- Reassurance Microcopy -->
+<div class="flex items-center justify-center gap-1.5 text-outline pt-2">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+<span class="font-label-sm text-label-sm">Được bảo vệ bởi Dịch vụ Hỗ trợ Hành trình 24/7</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function pulseVehicle() {
+    alert("Xe đang di chuyển an toàn trên QL20 với vận tốc ổn định 64 km/h.");
+  }
+
+  function shareTrip() {
+    if (navigator.share) {
+      navigator.share({
+        title: "Theo dõi chuyến xe TP.HCM - Đà Lạt",
+        text: "Tôi đang trên xe Phù Sa Express (51B-892.45), dự kiến đến Đà Lạt lúc 05:30 sáng mai!",
+        url: window.location.href,
+      }).catch(() => {});
+    } else {
+      alert("Đã sao chép liên kết theo dõi hành trình vào bộ nhớ tạm!");
+    }
+  }
+
+  function openQrModal() {
+    alert("Vé điện tử Ghế A05: Mã QR hợp lệ sẵn sàng trình tại trạm dừng.");
+  }
+</script></main></body></html>

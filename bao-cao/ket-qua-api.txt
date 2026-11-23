@@ -1,0 +1,46 @@
+OK   F02 Quên mật khẩu: trả cùng thông báo dù email không tồn tại
+OK   F02 Email đặt lại mật khẩu có đường dẫn
+OK   F02 Đặt lại mật khẩu thành công, dùng lại link → lỗi
+OK   F02 Đăng nhập bằng mật khẩu mới
+OK   F03 Sửa hồ sơ; đổi mật khẩu sai mật khẩu cũ → WRONG_PASSWORD
+OK   F04 Thêm / xem / xóa hành khách thường đi
+OK   F05 Tìm chuyến HCM → Đà Lạt có kết quả và điểm đánh giá
+OK   F06 Lọc loại xe + giá + điểm đánh giá + giờ
+OK   F07 Chi tiết chuyến có tiện ích xe, F11 điểm đón có tọa độ
+OK   F20 Xem đánh giá của tuyến (tên người đánh giá được che)
+OK   F08 Giá theo loại ghế (tầng dưới +20.000đ); F10 có ghế dành cho nữ
+OK   F09 Giữ 2 ghế
+OK   F10 Ghế nữ mà hành khách khai Nam → FEMALE_ONLY_SEAT
+OK   F12 Kiểm tra mã: GIAM10 hợp lệ, HETHAN báo hết hạn
+OK   F07 F12 Tạo đơn có giảm giá, đúng tổng tiền
+OK   F13 Thanh toán thành công → PAID
+OK   F14 Email vé điện tử có mã QR
+OK   F15 Tải vé PDF (chủ vé, hoặc mã + SĐT đúng; SĐT sai → 404)
+OK   F16 Vé của tôi; F17 tra cứu (SĐT bị che)
+OK   F19 Đổi sang chuyến khác cùng tuyến; ghế cũ trống lại
+OK   F19 Có email xác nhận đổi vé
+OK   F18 Hủy vé: hoàn 90% theo chính sách
+OK   F20 Đánh giá chuyến đã đi; lần 2 bị chặn; vé chưa đi bị chặn
+OK   F23 Bán vé tại quầy (tiền mặt) → PAID, kênh COUNTER
+OK   F24 Danh sách hành khách; check-in bằng mã QR; quét lại báo đã lên xe
+OK   F24 Khách không được gọi API nhân viên
+OK   F25 Thêm tuyến có điểm đón, ngừng tuyến
+OK   F26 Sửa phụ thu ghế, tiện ích xe; khóa ghế → khách không giữ được
+OK   F27 Tạo chuyến hàng loạt từ lịch; bấm lại không tạo trùng
+OK   F27 Hủy chuyến: vé bị hủy, hoàn 100%, có email báo khách
+OK   F28 Tìm đơn theo mã; admin hủy hoàn 100%
+OK   F29 Khóa tài khoản → không đăng nhập được; không tự khóa chính mình
+OK   F31 Tạo mã giảm giá; thiếu % hoặc số tiền → lỗi
+OK   F21 Chatbot hiểu "mai", "sài gòn", "tối" → trả chuyến thật
+OK   F21 Chatbot trả lời chính sách hủy vé từ tài liệu
+OK   F21 Chatbot tra vé bằng mã + SĐT
+OK   F21 Chatbot trả lời đúng chủ đề hành lý và đổi vé
+OK   F22 Câu ngoài phạm vi → gợi ý gặp nhân viên; tạo yêu cầu chuyển nhân viên
+OK   F32 Thêm tài liệu → chatbot dùng ngay; admin xem lịch sử chat
+OK   F34 Gửi khiếu nại; nhân viên trả lời; khách xem câu trả lời; khách vãng lai phải có SĐT
+OK   F30 Thống kê doanh thu, theo tuyến, lấp đầy; xuất Excel
+OK   F35 Nhật ký ghi thao tác admin/nhân viên, không lưu mật khẩu
+OK   F01 Khách gọi API quản trị → 403
+OK   F33 Email nhắc lịch tự gửi cho chuyến trong 3 giờ tới
+
+Kết quả: 44/44 đạt

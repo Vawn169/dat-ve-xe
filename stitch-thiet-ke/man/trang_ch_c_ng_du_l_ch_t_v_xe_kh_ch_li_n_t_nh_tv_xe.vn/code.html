@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>ĐặtVéXe.vn - Nền Tảng Du Lịch &amp; Đặt Vé Xe Khách Toàn Quốc</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0b7a5e",
+            "primary-dark": "#005f48",
+            "primary-container": "#0b7a5e",
+            "primary-fixed": "#98f5d2",
+            "primary-light": "#e8f7f2",
+            sunset: "#f59e0b",
+            "sunset-dark": "#d97706",
+            "sunset-light": "#fef3c7",
+            "sky-blue": "#0284c7",
+            "sky-light": "#e0f2fe",
+            "surface": "#f8fbfa",
+            "surface-low": "#f0f5f3",
+            "surface-card": "#ffffff",
+            "on-surface": "#0f231d",
+            "on-surface-variant": "#496057",
+            "outline": "#d1ded9",
+            "outline-light": "#e7eeeb"
+          },
+          fontFamily: {
+            body: ["Be Vietnam Pro", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        color: #0f231d;
+        background-color: #f8fbfa;
+        scroll-behavior: smooth;
+      }
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f0f5f3; }
+    ::-webkit-scrollbar-thumb { background: #bdc9c2; border-radius: 9999px; }
+    .ticket-cutout-left {
+      position: absolute;
+      top: 50%;
+      left: -12px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background-color: #f8fbfa;
+    }
+    .ticket-cutout-right {
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background-color: #f8fbfa;
+    }
+  </style>
+</head>
+<body class="font-body antialiased bg-surface text-on-surface">
+<!-- Header & Navigation -->
+<header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-outline-light shadow-sm transition-all duration-300">
+<div class="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+<!-- Brand Logo -->
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-[#10b981] flex items-center justify-center text-white shadow-md shadow-primary/20 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">directions_bus</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-extrabold text-primary tracking-tight leading-none">
+              ĐặtVéXe<span class="text-sunset">.vn</span>
+</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider mt-0.5">Du lịch &amp; Xe khách</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden xl:flex items-center gap-1 font-medium text-sm text-on-surface-variant">
+<a class="px-3 py-2 rounded-lg text-primary font-semibold hover:bg-primary-light transition-colors flex items-center gap-1" href="#destinations">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+<span>Khám phá điểm đến</span>
+</a>
+<a class="px-3 py-2 rounded-lg hover:text-on-surface hover:bg-surface-low transition-colors" href="#search-card">Tra cứu vé</a>
+<a class="px-3 py-2 rounded-lg hover:text-on-surface hover:bg-surface-low transition-colors" href="#">Vé của tôi</a>
+<a class="px-3 py-2 rounded-lg text-sunset-dark font-semibold hover:bg-sunset-light/60 transition-colors flex items-center gap-1" href="#vouchers">
+<span class="material-symbols-outlined text-[17px]">local_fire_department</span>
+<span>Ưu đãi hot</span>
+</a>
+<a class="px-3 py-2 rounded-lg hover:text-on-surface hover:bg-surface-low transition-colors" href="#themed-tours">Cẩm nang du lịch</a>
+<a class="px-3 py-2 rounded-lg hover:text-on-surface hover:bg-surface-low transition-colors" href="#help">Hỗ trợ</a>
+</nav>
+</div>
+<!-- Right Contact & Account Info -->
+<div class="flex items-center gap-3 md:gap-4">
+<div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-low border border-outline-light text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px] animate-pulse">support_agent</span>
+<div class="flex flex-col text-left">
+<span class="text-[10px] text-on-surface-variant leading-none font-medium">Tổng đài 24/7</span>
+<span class="text-xs font-bold text-primary">1900 8888</span>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-low cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-[18px] text-sky-blue">language</span>
+<span>Tiếng Việt</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-sm font-semibold bg-primary hover:bg-primary-dark text-white transition-all shadow-md shadow-primary/25 hover:shadow-lg active:scale-95" href="#">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>
+<span class="hidden sm:inline">Tài khoản</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Body Content -->
+<main class="w-full pt-20">
+<!-- Immersive Travel Hero Banner -->
+<section class="relative w-full min-h-[680px] lg:min-h-[740px] flex items-center justify-center overflow-hidden">
+<!-- Background Image with scenic landscape -->
+<div class="absolute inset-0 z-0">
+<img alt="Đà Lạt hoàng hôn rừng thông hùng vĩ" class="w-full h-full object-cover object-center transform scale-105 filter saturate-[1.15]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjD_CUAryCfjerFal417U-D3WsnpxOdlZaP7LQJwMVTuu1JIVuTBO7mfjyAyPq4PTpZuz6WPdG9xiOLfZ7QjgMj58aXZ28zSqVrbxxeYtZIbTOc7NutYO91qPMzAzjsLYZrfTvSQfE2ZVbqKY26WsoGIWEDMIubO1H2AacZR5ZsPU900LSXVxk5ncNaL4cHTneGdClx86pnbu6QisQLlavcWkVP4oQRUQqXnPozCM"/>
+<!-- Layered Cinematic Travel Gradients -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#091a14]/95 via-[#0b281f]/65 to-black/35 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-dark/40 via-transparent to-sunset-dark/30 mix-blend-overlay"></div>
+<div class="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-surface to-transparent"></div>
+</div>
+<!-- Hero Visual Envelope -->
+<div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex flex-col items-center">
+<!-- Travel Micro Badge -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/25 text-white text-xs md:text-sm font-medium mb-4 shadow-lg">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sunset opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-sunset"></span>
+</span>
+<span>Nền tảng du lịch &amp; xe khách liên tỉnh #1 Việt Nam</span>
+<span class="text-sunset text-xs">✦</span>
+</div>
+<!-- Inspiring Headline -->
+<h1 class="text-center font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight max-w-4xl drop-shadow-md mb-3">
+          Khám Phá Việt Nam <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-fixed via-[#ffd166] to-sunset">
+            Trên Mỗi Chuyến Xe
+          </span>
+</h1>
+<p class="text-center text-sm sm:text-base lg:text-lg text-white/90 max-w-2xl mb-8 font-light leading-relaxed drop-shadow">
+          Hơn 2.000+ tuyến đường kết nối những cung đèo ngoạn mục, biển đảo xanh trong và các di sản kỳ vĩ. Giữ chỗ tức thì, an tâm trọn hành trình.
+        </p>
+<!-- Floating Booking Search Card -->
+<div class="w-full max-w-5xl" id="search-card">
+<!-- Mode Tabs -->
+<div class="flex items-center gap-1.5 p-1.5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 w-fit mb-3 shadow-xl">
+<button class="px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-primary shadow flex items-center gap-2 transition-all" id="tab-bus" type="button">
+<span class="material-symbols-outlined text-[18px]">directions_bus</span>
+<span>Xe Khách Liên Tỉnh</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-white/85 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-all" id="tab-limo" type="button">
+<span class="material-symbols-outlined text-[18px] text-sunset">airline_seat_recline_extra</span>
+<span>Xe Limousine VIP</span>
+</button>
+<button class="px-4 py-2 rounded-xl text-xs sm:text-sm font-medium text-white/85 hover:text-white hover:bg-white/10 flex items-center gap-2 transition-all" id="tab-rent" type="button">
+<span class="material-symbols-outlined text-[18px] text-sky-blue">airport_shuttle</span>
+<span>Thuê Xe Du Lịch</span>
+</button>
+</div>
+<!-- Main Booking Container -->
+<div class="bg-white rounded-3xl p-4 sm:p-6 lg:p-7 shadow-2xl border border-white/60">
+<!-- Sub Options: One-way / Round-trip & Feature Badges -->
+<div class="flex flex-wrap items-center justify-between gap-3 pb-4 mb-4 border-b border-outline-light">
+<div class="flex items-center gap-6">
+<label class="flex items-center gap-2 cursor-pointer group text-sm font-semibold text-on-surface">
+<input checked="" class="w-4 h-4 text-primary accent-primary focus:ring-primary" id="radio-oneway" name="trip_type" type="radio" value="oneway"/>
+<span class="group-hover:text-primary transition-colors">Một chiều</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group text-sm font-semibold text-on-surface-variant">
+<input class="w-4 h-4 text-primary accent-primary focus:ring-primary" id="radio-roundtrip" name="trip_type" type="radio" value="roundtrip"/>
+<span class="group-hover:text-primary transition-colors">Khứ hồi</span>
+</label>
+</div>
+<div class="hidden sm:flex items-center gap-3 text-xs text-on-surface-variant">
+<span class="flex items-center gap-1 text-primary bg-primary-light px-2.5 py-1 rounded-full font-medium">
+<span class="material-symbols-outlined text-[14px]">shield_check</span> Giữ chỗ 100%
+                </span>
+<span class="flex items-center gap-1 text-sunset-dark bg-sunset-light px-2.5 py-1 rounded-full font-medium">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span> Xuất VAT điện tử tức thì
+                </span>
+</div>
+</div>
+<!-- Input Fields Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-3 lg:gap-4 items-center">
+<!-- Departure City -->
+<div class="md:col-span-3 bg-surface-low hover:bg-[#ebf3f0] focus-within:bg-white focus-within:ring-2 focus-within:ring-primary/20 border border-outline-light rounded-2xl p-3 transition-all relative">
+<label class="block text-[11px] font-bold text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                  Điểm đi
+                </label>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px] flex-shrink-0">trip_origin</span>
+<input class="w-full bg-transparent font-bold text-base text-on-surface focus:outline-none placeholder-gray-400" id="input-origin" placeholder="TP. Hồ Chí Minh" type="text" value="TP. Hồ Chí Minh"/>
+</div>
+<span class="block text-xs text-on-surface-variant truncate mt-0.5">BX Miền Đông, Quận 1, An Sương</span>
+</div>
+<!-- Swap Button -->
+<div class="md:col-span-1 flex justify-center -my-2 md:my-0 z-10">
+<button class="w-10 h-10 rounded-full bg-white border border-outline-light shadow hover:shadow-md hover:bg-primary-light text-primary transition-all flex items-center justify-center active:scale-95 group" id="btn-swap-location" title="Đổi tuyến đường" type="button">
+<span class="material-symbols-outlined text-[20px] group-hover:rotate-180 transition-transform duration-300">swap_horiz</span>
+</button>
+</div>
+<!-- Destination City -->
+<div class="md:col-span-3 bg-surface-low hover:bg-[#ebf3f0] focus-within:bg-white focus-within:ring-2 focus-within:ring-primary/20 border border-outline-light rounded-2xl p-3 transition-all">
+<label class="block text-[11px] font-bold text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-sunset"></span>
+                  Điểm đến
+                </label>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sunset text-[22px] flex-shrink-0">location_on</span>
+<input class="w-full bg-transparent font-bold text-base text-on-surface focus:outline-none placeholder-gray-400" id="input-destination" placeholder="Đà Lạt - Lâm Đồng" type="text" value="Đà Lạt (Lâm Đồng)"/>
+</div>
+<span class="block text-xs text-on-surface-variant truncate mt-0.5">BX Liên Tỉnh Đà Lạt, Trung tâm</span>
+</div>
+<!-- Departure Date & Return Date -->
+<div class="md:col-span-3 bg-surface-low hover:bg-[#ebf3f0] focus-within:bg-white focus-within:ring-2 focus-within:ring-primary/20 border border-outline-light rounded-2xl p-3 transition-all">
+<label class="block text-[11px] font-bold text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-sky-blue"></span>
+                  Ngày đi &amp; Số ghế
+                </label>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sky-blue text-[22px] flex-shrink-0">calendar_today</span>
+<input class="w-full bg-transparent font-bold text-sm lg:text-base text-on-surface focus:outline-none cursor-pointer" readonly="" type="text" value="T6, 24/10/2025 • 1 Khách"/>
+</div>
+<span class="block text-xs text-primary font-medium truncate mt-0.5">Hôm nay có 48+ chuyến mở bán</span>
+</div>
+<!-- Search CTA Button -->
+<div class="md:col-span-2 w-full h-full min-h-[58px] flex">
+<button class="w-full h-full min-h-[58px] bg-primary hover:bg-primary-dark text-white font-bold text-base rounded-2xl shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2 px-4 py-3 active:scale-95 group" type="button">
+<span class="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">search</span>
+<span>Tìm chuyến</span>
+</button>
+</div>
+</div>
+<!-- Quick Popular Tags Strip -->
+<div class="mt-4 pt-3 flex flex-wrap items-center gap-2 text-xs">
+<span class="text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-sunset">local_fire_department</span>
+                Tuyến hot gợi ý:
+              </span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-low hover:bg-primary-light hover:text-primary text-on-surface transition-colors font-medium" onclick="setRoute('TP. Hồ Chí Minh', 'Đà Lạt (Lâm Đồng)')" type="button">Đà Lạt</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-low hover:bg-primary-light hover:text-primary text-on-surface transition-colors font-medium" onclick="setRoute('TP. Hồ Chí Minh', 'Nha Trang (Khánh Hòa)')" type="button">Nha Trang</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-low hover:bg-primary-light hover:text-primary text-on-surface transition-colors font-medium" onclick="setRoute('Hà Nội', 'Sa Pa (Lào Cai)')" type="button">Sa Pa</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-low hover:bg-primary-light hover:text-primary text-on-surface transition-colors font-medium" onclick="setRoute('TP. Hồ Chí Minh', 'Vũng Tàu (Bà Rịa)')" type="button">Vũng Tàu</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-low hover:bg-primary-light hover:text-primary text-on-surface transition-colors font-medium" onclick="setRoute('Đà Nẵng', 'Quy Nhơn (Bình Định)')" type="button">Quy Nhơn</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-low hover:bg-primary-light hover:text-primary text-on-surface transition-colors font-medium" onclick="setRoute('TP. Hồ Chí Minh', 'Phan Thiết (Mũi Né)')" type="button">Phan Thiết</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Value Props Strip -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-10 relative z-20 w-full mb-16">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-white p-5 rounded-2xl shadow-md border border-outline-light flex items-center gap-4 hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-primary-light text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-on-surface">Cam kết có vé 100%</h4>
+<p class="text-xs text-on-surface-variant mt-0.5">Hoàn 150% nếu nhà xe hủy hoặc hết chỗ</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-2xl shadow-md border border-outline-light flex items-center gap-4 hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-sunset-light text-sunset-dark flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">price_check</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-on-surface">Đúng giá niêm yết</h4>
+<p class="text-xs text-on-surface-variant mt-0.5">Không phụ phí ẩn, minh bạch chính hãng</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-2xl shadow-md border border-outline-light flex items-center gap-4 hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-sky-light text-sky-blue flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">autorenew</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-on-surface">Đổi trả linh hoạt</h4>
+<p class="text-xs text-on-surface-variant mt-0.5">Tự động hoàn tiền online trong 60 giây</p>
+</div>
+</div>
+<div class="bg-white p-5 rounded-2xl shadow-md border border-outline-light flex items-center gap-4 hover:-translate-y-1 transition-all duration-300">
+<div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">directions_car</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-on-surface">Đón trả tận nơi 24/7</h4>
+<p class="text-xs text-on-surface-variant mt-0.5">Trung chuyển miễn phí trọn hành trình</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Điểm đến nổi bật (Featured Destinations Section) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16" id="destinations">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<div class="inline-flex items-center gap-1.5 text-primary text-xs font-bold uppercase tracking-wider mb-1.5">
+<span class="material-symbols-outlined text-[16px]">travel_explore</span>
+<span>Mạng lưới điểm đến hàng đầu</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">
+            Điểm Đến Nổi Bật Được Yêu Thích
+          </h2>
+<p class="text-sm text-on-surface-variant mt-1">
+            Gợi ý các địa danh du lịch tuyệt mỹ cùng tuyến xe chất lượng cao khởi hành mỗi ngày
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-semibold text-on-surface-variant">Lọc theo:</span>
+<button class="px-3 py-1.5 rounded-full text-xs font-bold bg-primary text-white">Tất cả</button>
+<button class="px-3 py-1.5 rounded-full text-xs font-medium bg-surface-low hover:bg-surface text-on-surface-variant">Miền Nam</button>
+<button class="px-3 py-1.5 rounded-full text-xs font-medium bg-surface-low hover:bg-surface text-on-surface-variant">Miền Bắc</button>
+<button class="px-3 py-1.5 rounded-full text-xs font-medium bg-surface-low hover:bg-surface text-on-surface-variant">Miền Trung</button>
+</div>
+</div>
+<!-- Destination Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Destination 1: Đà Lạt -->
+<div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-light flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Đà Lạt sương mù và đồi thông" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjD_CUAryCfjerFal417U-D3WsnpxOdlZaP7LQJwMVTuu1JIVuTBO7mfjyAyPq4PTpZuz6WPdG9xiOLfZ7QjgMj58aXZ28zSqVrbxxeYtZIbTOc7NutYO91qPMzAzjsLYZrfTvSQfE2ZVbqKY26WsoGIWEDMIubO1H2AacZR5ZsPU900LSXVxk5ncNaL4cHTneGdClx86pnbu6QisQLlavcWkVP4oQRUQqXnPozCM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-sunset text-white text-[11px] font-bold tracking-wide shadow">
+              Hot mùa này
+            </span>
+<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between text-white">
+<div>
+<h3 class="text-xl font-extrabold leading-tight">Đà Lạt</h3>
+<p class="text-xs text-white/90">Thành phố sương mù &amp; hoa rực rỡ</p>
+</div>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-white/20 backdrop-blur-md">6 - 8 tiếng</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div class="flex flex-col gap-2 text-xs text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 60+ chuyến khởi hành mỗi ngày
+                </span>
+<span class="flex items-center gap-1 text-sunset font-bold">
+<span class="material-symbols-outlined text-[16px] text-sunset fill-current" style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (2.4k)
+                </span>
+</div>
+<p class="text-xs text-on-surface">Các hãng xe: <span class="font-semibold">Phương Trang, Điền Linh, An Anh Limousine</span></p>
+</div>
+<div class="pt-3 border-t border-outline-light flex items-center justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant">Giá vé tốt nhất</span>
+<div class="text-lg font-bold text-primary">từ 250.000đ</div>
+</div>
+<button class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs font-bold transition-colors flex items-center gap-1" onclick="setRoute('TP. Hồ Chí Minh', 'Đà Lạt (Lâm Đồng)')" type="button">
+<span>Đặt vé ngay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Destination 2: Nha Trang -->
+<div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-light flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Bãi biển Nha Trang xanh trong cát trắng" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT1b92DG-huHjnKUqHiRKcq1XxdjwRXIwlV6z4bucspT5DANDWRJtbQ-5kAXnElBq4Aca7XYMn-JxptVWc-M5Pm_kV2YhF-GiviB_V7l63gzQadM3jIgyNhKE5azeyqYwBmIqbKQzG-hmpg_oVY9Sc0mBvKnavKtcly_eAf3mFi3DJpBCyx8AaXD7f2y-Z6ikdkhwxvabg04XKWsdgfNRaWjZVLd0YCAE-rQysOIU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-sky-blue text-white text-[11px] font-bold tracking-wide shadow">
+              Ưa chuộng
+            </span>
+<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between text-white">
+<div>
+<h3 class="text-xl font-extrabold leading-tight">Nha Trang</h3>
+<p class="text-xs text-white/90">Thiên đường biển xanh cát trắng</p>
+</div>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-white/20 backdrop-blur-md">7 - 9 tiếng</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div class="flex flex-col gap-2 text-xs text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 45+ chuyến khởi hành mỗi ngày
+                </span>
+<span class="flex items-center gap-1 text-sunset font-bold">
+<span class="material-symbols-outlined text-[16px] text-sunset fill-current" style="font-variation-settings: 'FILL' 1;">star</span> 4.8 (1.6k)
+                </span>
+</div>
+<p class="text-xs text-on-surface">Các hãng xe: <span class="font-semibold">Liên Hưng, Huỳnh Gia, Trà Lan Viên</span></p>
+</div>
+<div class="pt-3 border-t border-outline-light flex items-center justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant">Giá vé tốt nhất</span>
+<div class="text-lg font-bold text-primary">từ 280.000đ</div>
+</div>
+<button class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs font-bold transition-colors flex items-center gap-1" onclick="setRoute('TP. Hồ Chí Minh', 'Nha Trang (Khánh Hòa)')" type="button">
+<span>Đặt vé ngay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Destination 3: Sa Pa -->
+<div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-light flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Ruộng bậc thang vàng rực Sa Pa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKnu8KdsTSAou-gLxqm8eglM1IXn1n4h7VT81hJKl_uC9TwHakeRzmCrngWgSJrVqThSPyaC3gsxDN48Y8VBQauYmR2PO8X1-it_QY0Mmckt-m-ideAIa7xay1pB7vC4yRhBfJ8adgoat9hvw6uOd8-lDrO1YUzLUHhRDjkZAl04Ec9T1hv1AhpoglUXv4cKSvFF-UoyOSD56MTy6Wt-oq8jsbP1Q3qKjO8Zyf7YY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-emerald-600 text-white text-[11px] font-bold tracking-wide shadow">
+              Đang vào mùa
+            </span>
+<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between text-white">
+<div>
+<h3 class="text-xl font-extrabold leading-tight">Sa Pa</h3>
+<p class="text-xs text-white/90">Mùa vàng ruộng bậc thang mây ngàn</p>
+</div>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-white/20 backdrop-blur-md">5.5 tiếng</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div class="flex flex-col gap-2 text-xs text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 38+ chuyến cao tốc Nội Bài
+                </span>
+<span class="flex items-center gap-1 text-sunset font-bold">
+<span class="material-symbols-outlined text-[16px] text-sunset fill-current" style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (3.1k)
+                </span>
+</div>
+<p class="text-xs text-on-surface">Các hãng xe: <span class="font-semibold">Sao Việt, Inter Bus Lines, Fansipan Express</span></p>
+</div>
+<div class="pt-3 border-t border-outline-light flex items-center justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant">Giá vé tốt nhất</span>
+<div class="text-lg font-bold text-primary">từ 320.000đ</div>
+</div>
+<button class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs font-bold transition-colors flex items-center gap-1" onclick="setRoute('Hà Nội', 'Sa Pa (Lào Cai)')" type="button">
+<span>Đặt vé ngay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Destination 4: Hội An -->
+<div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-light flex flex-col">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Phố cổ Hội An lung linh đèn lồng sông Hoài" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE69mzrF8kpsWkplenPPhJK4lEOpZDgwfMgD6rSdze6eoq5A6BSmHZb9lN30xxzB0bO9iFL4DbeDdNr6JmJHJgh4-ja4HWZVohL4qcmub-i38q3lQrWaZVGl1eYFZxWP9lRw2PnbxfmLV9PJ2EnKPXru3SO1k94NyD5UN6pIM9YLYU9eBfEam32-TXi5CUcBACr3LJR1dJD1uHMthVKJzYFdkW1vmDjDDR7DfoFco"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-amber-600 text-white text-[11px] font-bold tracking-wide shadow">
+              Di sản văn hóa
+            </span>
+<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between text-white">
+<div>
+<h3 class="text-xl font-extrabold leading-tight">Hội An</h3>
+<p class="text-xs text-white/90">Phố cổ đèn lồng &amp; di sản hoài niệm</p>
+</div>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-white/20 backdrop-blur-md">Đà Nẵng + 45p</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div class="flex flex-col gap-2 text-xs text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Đón tận nơi phố cổ Hội An
+                </span>
+<span class="flex items-center gap-1 text-sunset font-bold">
+<span class="material-symbols-outlined text-[16px] text-sunset fill-current" style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (1.2k)
+                </span>
+</div>
+<p class="text-xs text-on-surface">Các hãng xe: <span class="font-semibold">Hạnh Cafe, Barri Ann Travel, Queen Cafe</span></p>
+</div>
+<div class="pt-3 border-t border-outline-light flex items-center justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant">Giá vé tốt nhất</span>
+<div class="text-lg font-bold text-primary">từ 390.000đ</div>
+</div>
+<button class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs font-bold transition-colors flex items-center gap-1" onclick="setRoute('TP. Hồ Chí Minh', 'Hội An (Quảng Nam)')" type="button">
+<span>Đặt vé ngay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Destination 5: Vũng Tàu -->
+<div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-light flex flex-col">
+<div class="relative h-56 w-full overflow-hidden bg-sky-900">
+<img alt="Đường bờ biển Vũng Tàu xe chạy êm ái" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCbHG3T43so650_fgfJYOD-YwEPxROa5qJY_Y5UopeMOlJxd-v0rrWWvLyztWpstanzDq1dJnOZxg2ICyPUbobbYjrnLFnqJ2arI6jwqsA9p4ehss3ANQjkPjniYZNQg6DjsuYDKPShKWCjhUDtaFO8dyXBp9DE5QJPK2AZK_-TZLYigXk3ag3GTAkvC_2GTdMvaTkryf0V7fa-81-6GwmG3c33QGp__ZsLl-eu3M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-cyan-600 text-white text-[11px] font-bold tracking-wide shadow">
+              Đi trốn cuối tuần
+            </span>
+<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between text-white">
+<div>
+<h3 class="text-xl font-extrabold leading-tight">Vũng Tàu</h3>
+<p class="text-xs text-white/90">Nắng gió biển gần, hải sản tươi ngon</p>
+</div>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-white/20 backdrop-blur-md">2 - 2.5 tiếng</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div class="flex flex-col gap-2 text-xs text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 15 phút có 1 chuyến xuất bến
+                </span>
+<span class="flex items-center gap-1 text-sunset font-bold">
+<span class="material-symbols-outlined text-[16px] text-sunset fill-current" style="font-variation-settings: 'FILL' 1;">star</span> 4.8 (4.2k)
+                </span>
+</div>
+<p class="text-xs text-on-surface">Các hãng xe: <span class="font-semibold">Hoa Mai, Huy Hoàng, Toàn Thắng Limousine</span></p>
+</div>
+<div class="pt-3 border-t border-outline-light flex items-center justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant">Giá vé tốt nhất</span>
+<div class="text-lg font-bold text-primary">từ 160.000đ</div>
+</div>
+<button class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs font-bold transition-colors flex items-center gap-1" onclick="setRoute('TP. Hồ Chí Minh', 'Vũng Tàu (Bà Rịa)')" type="button">
+<span>Đặt vé ngay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Destination 6: Phú Quốc -->
+<div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-light flex flex-col">
+<div class="relative h-56 w-full overflow-hidden bg-emerald-900">
+<img alt="Bãi biển đảo Phú Quốc biển ngọc" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT1b92DG-huHjnKUqHiRKcq1XxdjwRXIwlV6z4bucspT5DANDWRJtbQ-5kAXnElBq4Aca7XYMn-JxptVWc-M5Pm_kV2YhF-GiviB_V7l63gzQadM3jIgyNhKE5azeyqYwBmIqbKQzG-hmpg_oVY9Sc0mBvKnavKtcly_eAf3mFi3DJpBCyx8AaXD7f2y-Z6ikdkhwxvabg04XKWsdgfNRaWjZVLd0YCAE-rQysOIU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-indigo-600 text-white text-[11px] font-bold tracking-wide shadow">
+              Combo vé + phà
+            </span>
+<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between text-white">
+<div>
+<h3 class="text-xl font-extrabold leading-tight">Phú Quốc</h3>
+<p class="text-xs text-white/90">Đảo ngọc biển trong xanh biếc</p>
+</div>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-white/20 backdrop-blur-md">Xe + Tàu cao tốc</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between gap-4">
+<div class="flex flex-col gap-2 text-xs text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 font-medium text-primary">
+<span class="material-symbols-outlined text-[16px]">directions_boat</span> Nối chuyến Rạch Giá / Hà Tiên
+                </span>
+<span class="flex items-center gap-1 text-sunset font-bold">
+<span class="material-symbols-outlined text-[16px] text-sunset fill-current" style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (980)
+                </span>
+</div>
+<p class="text-xs text-on-surface">Đối tác liên vận: <span class="font-semibold">Phú Quốc Express, Superdong, Tuấn Nga</span></p>
+</div>
+<div class="pt-3 border-t border-outline-light flex items-center justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant">Combo trọn gói từ</span>
+<div class="text-lg font-bold text-primary">từ 450.000đ</div>
+</div>
+<button class="px-4 py-2 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs font-bold transition-colors flex items-center gap-1" onclick="setRoute('TP. Hồ Chí Minh', 'Phú Quốc (Kiên Giang)')" type="button">
+<span>Đặt vé ngay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gợi ý hành trình theo chủ đề (Themed Travel Showcase) -->
+<section class="w-full bg-gradient-to-b from-[#f0f7f4] to-surface py-16 mb-16" id="themed-tours">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-12">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-light text-primary text-xs font-bold uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+<span>Chuyến đi truyền cảm hứng</span>
+</div>
+<h2 class="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight">
+            Gợi Ý Hành Trình Theo Chủ Đề
+          </h2>
+<p class="text-sm sm:text-base text-on-surface-variant mt-2">
+            Lịch trình được thiết kế chuẩn xác theo thời gian xuất bến của xe khách đêm, giúp bạn tận dụng trọn vẹn kỳ nghỉ.
+          </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Themed Card 1: Săn mây Đà Lạt -->
+<div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-outline-light flex flex-col group">
+<div class="relative h-60 overflow-hidden">
+<img alt="Săn mây Đà Lạt đồi thông sáng sớm" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjD_CUAryCfjerFal417U-D3WsnpxOdlZaP7LQJwMVTuu1JIVuTBO7mfjyAyPq4PTpZuz6WPdG9xiOLfZ7QjgMj58aXZ28zSqVrbxxeYtZIbTOc7NutYO91qPMzAzjsLYZrfTvSQfE2ZVbqKY26WsoGIWEDMIubO1H2AacZR5ZsPU900LSXVxk5ncNaL4cHTneGdClx86pnbu6QisQLlavcWkVP4oQRUQqXnPozCM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-sunset">wb_sunny</span>
+<span>Tháng 10 - Tháng 4</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<span class="text-xs uppercase tracking-wider text-sunset font-bold block mb-1">Chuyến xe nghỉ dưỡng</span>
+<h3 class="text-xl font-extrabold leading-snug">Săn Mây &amp; Check-in Đồi Chè Đà Lạt</h3>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between gap-5">
+<div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+                  Lên xe lúc 23:00 tối tại Sài Gòn, ngủ một giấc thật sâu trên cabin phòng riêng và thức giấc lúc 5:30 sáng đón bình minh săn mây Cầu Đất tráng lệ.
+                </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-lg bg-surface-low text-[11px] font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">bed</span> Limousine phòng đơn
+                  </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-low text-[11px] font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sunset">cloud</span> Săn mây 5h sáng
+                  </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-low text-[11px] font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sky-blue">coffee</span> Cà phê lưng đồi
+                  </span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-light flex items-center justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant">Vé xe giường phòng</span>
+<div class="text-lg font-extrabold text-primary">từ 290.000đ</div>
+</div>
+<a class="px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs font-bold transition-all shadow-sm flex items-center gap-1" href="#search-card">
+<span>Xem tuyến xe</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Themed Card 2: Biển ngọc Nha Trang -->
+<div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-outline-light flex flex-col group">
+<div class="relative h-60 overflow-hidden">
+<img alt="Lặn ngắm san hô biển Nha Trang" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT1b92DG-huHjnKUqHiRKcq1XxdjwRXIwlV6z4bucspT5DANDWRJtbQ-5kAXnElBq4Aca7XYMn-JxptVWc-M5Pm_kV2YhF-GiviB_V7l63gzQadM3jIgyNhKE5azeyqYwBmIqbKQzG-hmpg_oVY9Sc0mBvKnavKtcly_eAf3mFi3DJpBCyx8AaXD7f2y-Z6ikdkhwxvabg04XKWsdgfNRaWjZVLd0YCAE-rQysOIU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-sky-blue flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-sky-blue">sailing</span>
+<span>Quanh năm nắng ấm</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<span class="text-xs uppercase tracking-wider text-sky-light font-bold block mb-1">Chuyến xe biển xanh</span>
+<h3 class="text-xl font-extrabold leading-snug">Biển Ngọc &amp; Lặn San Hô Nha Trang</h3>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between gap-5">
+<div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+                  Hành trình êm ru qua cao tốc Cam Lâm - Vĩnh Hảo, đón ngày mới với bãi biển ngọc, cano lặn biển ngắm san hô Hòn Tằm và hải sản tươi sống.
+                </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-lg bg-surface-low text-[11px] font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sky-blue">directions_bus</span> Xe giường nằm VIP
+                  </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-low text-[11px] font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">nightlight</span> Khởi hành đêm
+                  </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-low text-[11px] font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sunset">hotel</span> Đón tận khách sạn
+                  </span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-light flex items-center justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant">Vé xe giường phòng</span>
+<div class="text-lg font-extrabold text-primary">từ 300.000đ</div>
+</div>
+<a class="px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs font-bold transition-all shadow-sm flex items-center gap-1" href="#search-card">
+<span>Xem tuyến xe</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Themed Card 3: Mùa vàng Sa Pa -->
+<div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-outline-light flex flex-col group">
+<div class="relative h-60 overflow-hidden">
+<img alt="Ruộng bậc thang vàng óng Sa Pa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKnu8KdsTSAou-gLxqm8eglM1IXn1n4h7VT81hJKl_uC9TwHakeRzmCrngWgSJrVqThSPyaC3gsxDN48Y8VBQauYmR2PO8X1-it_QY0Mmckt-m-ideAIa7xay1pB7vC4yRhBfJ8adgoat9hvw6uOd8-lDrO1YUzLUHhRDjkZAl04Ec9T1hv1AhpoglUXv4cKSvFF-UoyOSD56MTy6Wt-oq8jsbP1Q3qKjO8Zyf7YY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-emerald-700 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-sunset">landscape</span>
+<span>Tháng 9 - Tháng 11</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<span class="text-xs uppercase tracking-wider text-sunset font-bold block mb-1">Cung đường Tây Bắc</span>
+<h3 class="text-xl font-extrabold leading-snug">Mùa Lúa Chín &amp; Đỉnh Fansipan Sa Pa</h3>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between gap-5">
+<div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+                  Trải nghiệm cung đường cao tốc Hà Nội - Lào Cai trên khoang cabin tình yêu tiện nghi sưởi ấm, bước vào bức tranh thung lũng Mường Hoa nhuộm vàng óng.
+                </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-lg bg-surface-low text-[11px] font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-rose-500">favorite</span> Cabin đôi tình nhân
+                  </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-low text-[11px] font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">speed</span> Xe cao tốc êm ái
+                  </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-low text-[11px] font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-sunset">air</span> Điều hòa sưởi ấm
+                  </span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-light flex items-center justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant">Vé cabin đôi sang trọng</span>
+<div class="text-lg font-extrabold text-primary">từ 350.000đ</div>
+</div>
+<a class="px-4 py-2.5 rounded-xl bg-primary hover:bg-primary-dark text-white text-xs font-bold transition-all shadow-sm flex items-center gap-1" href="#search-card">
+<span>Xem tuyến xe</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ưu đãi & Mã giảm giá độc quyền (Ticket-stub Vouchers Strip) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16" id="vouchers">
+<div class="flex items-center justify-between mb-8">
+<div>
+<div class="inline-flex items-center gap-1 text-sunset-dark text-xs font-bold uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[16px]">confirmation_number</span>
+<span>Tiết kiệm thêm cho chuyến đi</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">
+            Ưu Đãi &amp; Mã Giảm Giá Độc Quyền
+          </h2>
+</div>
+<div class="hidden sm:flex items-center gap-1 text-xs font-semibold text-primary hover:underline cursor-pointer">
+<span>Xem tất cả voucher</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Voucher 1 -->
+<div class="relative bg-white rounded-2xl p-5 border border-outline-light shadow-sm hover:shadow-lg transition-all flex flex-col justify-between overflow-hidden">
+<div class="ticket-cutout-left border-r border-outline-light"></div>
+<div class="ticket-cutout-right border-l border-outline-light"></div>
+<div class="flex items-start justify-between gap-3 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-sunset-light text-sunset-dark flex items-center justify-center flex-shrink-0 font-extrabold text-lg">
+                50K
+              </div>
+<div>
+<span class="inline-block px-2 py-0.5 rounded-full bg-sunset-light text-sunset-dark text-[10px] font-bold uppercase mb-1">Khách hàng mới</span>
+<h4 class="font-bold text-sm text-on-surface">Giảm ngay 50.000đ</h4>
+<p class="text-xs text-on-surface-variant">Cho chuyến đi đầu tiên toàn quốc</p>
+</div>
+</div>
+</div>
+<div class="pt-3 border-t border-dashed border-outline flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Hạn dùng: 30/11/2025</span>
+<span class="font-mono font-bold text-sm text-primary tracking-wider">BANMOI25</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-low hover:bg-primary hover:text-white text-on-surface text-xs font-bold transition-all flex items-center gap-1 active:scale-95" onclick="navigator.clipboard.writeText('BANMOI25'); alert('Đã sao chép mã BANMOI25!')" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Sao chép</span>
+</button>
+</div>
+</div>
+<!-- Voucher 2 -->
+<div class="relative bg-white rounded-2xl p-5 border border-outline-light shadow-sm hover:shadow-lg transition-all flex flex-col justify-between overflow-hidden">
+<div class="ticket-cutout-left border-r border-outline-light"></div>
+<div class="ticket-cutout-right border-l border-outline-light"></div>
+<div class="flex items-start justify-between gap-3 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-light text-primary flex items-center justify-center flex-shrink-0 font-extrabold text-lg">
+                80K
+              </div>
+<div>
+<span class="inline-block px-2 py-0.5 rounded-full bg-primary-light text-primary text-[10px] font-bold uppercase mb-1">Limousine VIP</span>
+<h4 class="font-bold text-sm text-on-surface">Giảm ngay 80.000đ</h4>
+<p class="text-xs text-on-surface-variant">Khi đặt vé Limousine khứ hồi</p>
+</div>
+</div>
+</div>
+<div class="pt-3 border-t border-dashed border-outline flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Hạn dùng: 15/12/2025</span>
+<span class="font-mono font-bold text-sm text-primary tracking-wider">DILIMOU80</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-low hover:bg-primary hover:text-white text-on-surface text-xs font-bold transition-all flex items-center gap-1 active:scale-95" onclick="navigator.clipboard.writeText('DILIMOU80'); alert('Đã sao chép mã DILIMOU80!')" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Sao chép</span>
+</button>
+</div>
+</div>
+<!-- Voucher 3 -->
+<div class="relative bg-white rounded-2xl p-5 border border-outline-light shadow-sm hover:shadow-lg transition-all flex flex-col justify-between overflow-hidden">
+<div class="ticket-cutout-left border-r border-outline-light"></div>
+<div class="ticket-cutout-right border-l border-outline-light"></div>
+<div class="flex items-start justify-between gap-3 mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-sky-light text-sky-blue flex items-center justify-center flex-shrink-0 font-extrabold text-lg">
+                10%
+              </div>
+<div>
+<span class="inline-block px-2 py-0.5 rounded-full bg-sky-light text-sky-blue text-[10px] font-bold uppercase mb-1">Tuyến biển hè</span>
+<h4 class="font-bold text-sm text-on-surface">Giảm 10% Tối Đa 70K</h4>
+<p class="text-xs text-on-surface-variant">Vũng Tàu, Nha Trang, Mũi Né</p>
+</div>
+</div>
+</div>
+<div class="pt-3 border-t border-dashed border-outline flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant">Áp dụng cuối tuần</span>
+<span class="font-mono font-bold text-sm text-primary tracking-wider">CUOITUAN</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-low hover:bg-primary hover:text-white text-on-surface text-xs font-bold transition-all flex items-center gap-1 active:scale-95" onclick="navigator.clipboard.writeText('CUOITUAN'); alert('Đã sao chép mã CUOITUAN!')" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Sao chép</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Đánh giá từ du khách thực tế (Traveler Reviews) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16">
+<div class="text-center max-w-3xl mx-auto mb-10">
+<span class="text-primary text-xs font-bold uppercase tracking-wider block mb-1">Cảm nhận khách hàng</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">
+          Hơn 15 Triệu Du Khách Đã Tin Tưởng Đồng Hành
+        </h2>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1.5">
+          Những trải nghiệm du lịch đáng nhớ cùng cam kết phục vụ chuẩn mực từ các bác tài và nhà xe đối tác
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Review 1 -->
+<div class="bg-white p-6 rounded-3xl border border-outline-light shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-primary-light flex items-center justify-center font-bold text-primary text-sm">
+                  HN
+                </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h5 class="text-sm font-bold text-on-surface">Hoàng Nam</h5>
+<span class="material-symbols-outlined text-[16px] text-emerald-600" title="Đã đi chuyến này">verified</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Du lịch tự túc • Hà Nội</span>
+</div>
+</div>
+<div class="flex text-sunset">
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-md bg-surface-low text-primary text-[11px] font-semibold mb-3">
+              Tuyến: Hà Nội ➔ Sa Pa · Cabin đôi VIP
+            </div>
+<p class="text-xs text-on-surface-variant leading-relaxed italic">
+              "Đặt vé trên ĐặtVéXe.vn cực kỳ tiện, chọn đúng được cabin tầng 2 có rèm riêng ngắm cảnh đường núi. Xe chạy cao tốc êm ru, đúng giờ và tài xế rất lịch thiệp."
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-light text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Chuyến đi tháng 10/2025</span>
+<span class="text-emerald-700 font-medium">Hài lòng 100%</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-white p-6 rounded-3xl border border-outline-light shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-sunset-light flex items-center justify-center font-bold text-sunset-dark text-sm">
+                  MT
+                </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h5 class="text-sm font-bold text-on-surface">Minh Thảo</h5>
+<span class="material-symbols-outlined text-[16px] text-emerald-600" title="Đã đi chuyến này">verified</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Gia đình 4 người • TP.HCM</span>
+</div>
+</div>
+<div class="flex text-sunset">
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-md bg-surface-low text-primary text-[11px] font-semibold mb-3">
+              Tuyến: Sài Gòn ➔ Đà Lạt · Xe Phù Sa Express
+            </div>
+<p class="text-xs text-on-surface-variant leading-relaxed italic">
+              "Gia đình mình có con nhỏ nên rất sợ trễ chuyến, nhà xe gọi báo trước 30 phút và có xe trung chuyển đón ngay đầu hẻm. Vé điện tử quét mã QR lên xe trong 3 giây."
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-light text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Chuyến đi cuối tuần qua</span>
+<span class="text-emerald-700 font-medium">Trung chuyển tận nơi</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-white p-6 rounded-3xl border border-outline-light shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-sky-light flex items-center justify-center font-bold text-sky-blue text-sm">
+                  ĐK
+                </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h5 class="text-sm font-bold text-on-surface">Đăng Khoa</h5>
+<span class="material-symbols-outlined text-[16px] text-emerald-600" title="Đã đi chuyến này">verified</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Chuyến công tác • Đà Nẵng</span>
+</div>
+</div>
+<div class="flex text-sunset">
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-md bg-surface-low text-primary text-[11px] font-semibold mb-3">
+              Tuyến: Sài Gòn ➔ Vũng Tàu · Limousine 9 chỗ
+            </div>
+<p class="text-xs text-on-surface-variant leading-relaxed italic">
+              "Mình phải thay đổi giờ đi sát ngày, thao tác đổi vé online trên website mất đúng 1 phút không bị mất phí phụ thu nào. Dịch vụ CSKH 1900 8888 hỗ trợ quá nhiệt tình."
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-light text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Chuyến đi ngày 18/10</span>
+<span class="text-emerald-700 font-medium">Đổi trả siêu tốc</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Cẩm nang du lịch & Mẹo đi xe (Travel Tips & Blog Section) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+<div>
+<span class="text-primary text-xs font-bold uppercase tracking-wider block mb-1">Cẩm nang &amp; Kinh nghiệm</span>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">
+            Mẹo Đi Xe Khách &amp; Cẩm Nang Du Lịch
+          </h2>
+</div>
+<a class="text-xs font-bold text-primary hover:underline flex items-center gap-1" href="#">
+<span>Xem tất cả bài viết</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Blog Card 1 -->
+<article class="bg-white rounded-3xl overflow-hidden border border-outline-light shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer">
+<div class="relative h-48 overflow-hidden">
+<img alt="Sơ đồ ghế xe khách và trải nghiệm thoải mái" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjD_CUAryCfjerFal417U-D3WsnpxOdlZaP7LQJwMVTuu1JIVuTBO7mfjyAyPq4PTpZuz6WPdG9xiOLfZ7QjgMj58aXZ28zSqVrbxxeYtZIbTOc7NutYO91qPMzAzjsLYZrfTvSQfE2ZVbqKY26WsoGIWEDMIubO1H2AacZR5ZsPU900LSXVxk5ncNaL4cHTneGdClx86pnbu6QisQLlavcWkVP4oQRUQqXnPozCM"/>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary text-white text-[11px] font-bold shadow">
+              Mẹo đặt vé
+            </span>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant block mb-1">5 phút đọc • Cập nhật tuần này</span>
+<h3 class="text-base font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                Bí quyết chọn ghế xe giường nằm không say xe và thoải mái nhất
+              </h3>
+<p class="text-xs text-on-surface-variant mt-2 line-clamp-2 leading-relaxed">
+                Nên chọn tầng dưới dãy giữa hay cabin đơn đầu xe? Hướng dẫn chi tiết giúp bạn có giấc ngủ êm ái suốt chặng đường dài.
+              </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-light flex items-center justify-between text-xs text-primary font-bold">
+<span>Đọc hướng dẫn</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Blog Card 2 -->
+<article class="bg-white rounded-3xl overflow-hidden border border-outline-light shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer">
+<div class="relative h-48 overflow-hidden">
+<img alt="Đà Lạt sương mù lãng mạn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE69mzrF8kpsWkplenPPhJK4lEOpZDgwfMgD6rSdze6eoq5A6BSmHZb9lN30xxzB0bO9iFL4DbeDdNr6JmJHJgh4-ja4HWZVohL4qcmub-i38q3lQrWaZVGl1eYFZxWP9lRw2PnbxfmLV9PJ2EnKPXru3SO1k94NyD5UN6pIM9YLYU9eBfEam32-TXi5CUcBACr3LJR1dJD1uHMthVKJzYFdkW1vmDjDDR7DfoFco"/>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-sunset text-white text-[11px] font-bold shadow">
+              Cẩm nang điểm đến
+            </span>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant block mb-1">7 phút đọc • Xu hướng du lịch</span>
+<h3 class="text-base font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                Đi Đà Lạt mùa sương mây cần chuẩn bị trang phục và lịch trình thế nào?
+              </h3>
+<p class="text-xs text-on-surface-variant mt-2 line-clamp-2 leading-relaxed">
+                Tất tần tật gợi ý điểm săn mây 5h sáng, quán cà phê ngắm thung lũng đẹp mê mẩn và lịch trình xe đêm tiết kiệm tối đa thời gian.
+              </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-light flex items-center justify-between text-xs text-primary font-bold">
+<span>Đọc hướng dẫn</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Blog Card 3 -->
+<article class="bg-white rounded-3xl overflow-hidden border border-outline-light shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer">
+<div class="relative h-48 overflow-hidden">
+<img alt="Bờ biển đảo Phú Quốc xanh trong" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT1b92DG-huHjnKUqHiRKcq1XxdjwRXIwlV6z4bucspT5DANDWRJtbQ-5kAXnElBq4Aca7XYMn-JxptVWc-M5Pm_kV2YhF-GiviB_V7l63gzQadM3jIgyNhKE5azeyqYwBmIqbKQzG-hmpg_oVY9Sc0mBvKnavKtcly_eAf3mFi3DJpBCyx8AaXD7f2y-Z6ikdkhwxvabg04XKWsdgfNRaWjZVLd0YCAE-rQysOIU"/>
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-sky-blue text-white text-[11px] font-bold shadow">
+              Kinh nghiệm di chuyển
+            </span>
+</div>
+<div class="p-5 flex flex-col flex-grow justify-between">
+<div>
+<span class="text-[11px] text-on-surface-variant block mb-1">6 phút đọc • Liên vận thông minh</span>
+<h3 class="text-base font-extrabold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                Hướng dẫn đặt combo xe khách liên tỉnh nối chuyến tàu cao tốc đi Phú Quốc
+              </h3>
+<p class="text-xs text-on-surface-variant mt-2 line-clamp-2 leading-relaxed">
+                Cách khớp giờ xe khách đêm Sài Gòn - Rạch Giá với chuyến phà sáng sớm, tiết kiệm 50% chi phí so với vé máy bay mùa cao điểm.
+              </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-light flex items-center justify-between text-xs text-primary font-bold">
+<span>Đọc hướng dẫn</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Partner Bus Operators & Trust Stats -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 mb-16">
+<div class="text-center max-w-3xl mx-auto mb-8">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-on-surface tracking-tight">
+          Đồng Hành Cùng 150+ Hãng Xe Hàng Đầu Toàn Quốc
+        </h2>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1.5">
+          Kết nối trực tiếp hệ thống bán vé chính thức của các thương hiệu vận tải hàng đầu Việt Nam
+        </p>
+</div>
+<!-- Partner Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mb-10">
+<div class="bg-white p-3 rounded-2xl border border-outline-light shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-1.5 min-h-[85px] group">
+<span class="material-symbols-outlined text-primary text-[26px] group-hover:scale-110 transition-transform">directions_bus</span>
+<span class="text-xs font-bold text-on-surface">FUTA Bus Lines</span>
+</div>
+<div class="bg-white p-3 rounded-2xl border border-outline-light shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-1.5 min-h-[85px] group">
+<span class="material-symbols-outlined text-sunset-dark text-[26px] group-hover:scale-110 transition-transform">commute</span>
+<span class="text-xs font-bold text-on-surface">Thành Bưởi</span>
+</div>
+<div class="bg-white p-3 rounded-2xl border border-outline-light shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-1.5 min-h-[85px] group">
+<span class="material-symbols-outlined text-emerald-600 text-[26px] group-hover:scale-110 transition-transform">airport_shuttle</span>
+<span class="text-xs font-bold text-on-surface">Sao Việt Sapa</span>
+</div>
+<div class="bg-white p-3 rounded-2xl border border-outline-light shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-1.5 min-h-[85px] group">
+<span class="material-symbols-outlined text-primary text-[26px] group-hover:scale-110 transition-transform">directions_bus_filled</span>
+<span class="text-xs font-bold text-on-surface">Hoa Mai VIP</span>
+</div>
+<div class="bg-white p-3 rounded-2xl border border-outline-light shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-1.5 min-h-[85px] group">
+<span class="material-symbols-outlined text-primary text-[26px] group-hover:scale-110 transition-transform">minor_crash</span>
+<span class="text-xs font-bold text-on-surface">Hoàng Long</span>
+</div>
+<div class="bg-white p-3 rounded-2xl border border-outline-light shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-1.5 min-h-[85px] group">
+<span class="material-symbols-outlined text-sunset text-[26px] group-hover:scale-110 transition-transform">departure_board</span>
+<span class="text-xs font-bold text-on-surface">Kumho Samco</span>
+</div>
+<div class="bg-white p-3 rounded-2xl border border-outline-light shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-1.5 min-h-[85px] group">
+<span class="material-symbols-outlined text-sky-blue text-[26px] group-hover:scale-110 transition-transform">airport_shuttle</span>
+<span class="text-xs font-bold text-on-surface">Inter Bus Lines</span>
+</div>
+<div class="bg-white p-3 rounded-2xl border border-outline-light shadow-sm hover:shadow-md transition-all flex flex-col items-center justify-center text-center gap-1.5 min-h-[85px] group">
+<span class="material-symbols-outlined text-primary text-[26px] group-hover:scale-110 transition-transform">directions_bus</span>
+<span class="text-xs font-bold text-on-surface">Hải Vân VIP</span>
+</div>
+</div>
+<!-- Trust Counters -->
+<div class="w-full bg-white rounded-3xl p-8 border border-outline-light shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+<div class="flex flex-col items-center">
+<span class="text-3xl sm:text-4xl font-extrabold text-primary">15.000.000+</span>
+<span class="text-sm font-bold text-on-surface mt-1">Lượt khách hàng tin dùng</span>
+<span class="text-xs text-on-surface-variant mt-0.5">Đồng hành qua hàng triệu chuyến đi</span>
+</div>
+<div class="flex flex-col items-center border-y md:border-y-0 md:border-x border-outline-light py-4 md:py-0">
+<span class="text-3xl sm:text-4xl font-extrabold text-sunset">2.500+</span>
+<span class="text-sm font-bold text-on-surface mt-1">Tuyến đường liên tỉnh</span>
+<span class="text-xs text-on-surface-variant mt-0.5">Phủ sóng 63 tỉnh thành Việt Nam</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-3xl sm:text-4xl font-extrabold text-sky-blue">99.8%</span>
+<span class="text-sm font-bold text-on-surface mt-1">Tỷ lệ hài lòng &amp; tin cậy</span>
+<span class="text-xs text-on-surface-variant mt-0.5">Dịch vụ hỗ trợ &amp; chất lượng chuẩn 5 sao</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Complete Footer -->
+<footer class="w-full bg-[#0b2019] text-white/80 pt-16 pb-12 border-t border-emerald-900" id="help">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Col 1 -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary to-emerald-400 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">directions_bus</span>
+</div>
+<span class="text-xl font-extrabold text-white tracking-tight">
+              ĐặtVéXe<span class="text-sunset">.vn</span>
+</span>
+</div>
+<p class="text-xs text-white/70 leading-relaxed mt-1">
+            Hệ thống kết nối và đặt vé xe khách liên tỉnh, xe du lịch limousine trực tuyến số 1 Việt Nam. Đem lại trải nghiệm khám phá đất nước an toàn, thuận tiện và trọn vẹn.
+          </p>
+<div class="flex flex-col gap-2 mt-2 text-xs">
+<div class="flex items-center gap-2 text-white/90">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>GPKD: 0108923489 do Sở KH&amp;ĐT cấp</span>
+</div>
+<div class="flex items-center gap-2 text-white/90">
+<span class="material-symbols-outlined text-sunset text-[18px]">call</span>
+<span class="font-bold text-white">Hotline 24/7: 1900 8888</span>
+</div>
+<div class="flex items-center gap-2 text-white/90">
+<span class="material-symbols-outlined text-primary text-[18px]">mail</span>
+<span>cskh@datvexe.vn</span>
+</div>
+</div>
+</div>
+<!-- Col 2 -->
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider">Tuyến đường nổi bật</h4>
+<ul class="flex flex-col gap-2 text-xs">
+<li><a class="hover:text-sunset transition-colors flex items-center justify-between" href="#search-card"><span>Sài Gòn - Đà Lạt</span><span class="text-sunset">từ 250k</span></a></li>
+<li><a class="hover:text-sunset transition-colors flex items-center justify-between" href="#search-card"><span>Hà Nội - Sa Pa</span><span class="text-sunset">từ 320k</span></a></li>
+<li><a class="hover:text-sunset transition-colors flex items-center justify-between" href="#search-card"><span>Sài Gòn - Nha Trang</span><span class="text-sunset">từ 280k</span></a></li>
+<li><a class="hover:text-sunset transition-colors flex items-center justify-between" href="#search-card"><span>Đà Nẵng - Huế - Hội An</span><span class="text-sunset">từ 110k</span></a></li>
+<li><a class="hover:text-sunset transition-colors flex items-center justify-between" href="#search-card"><span>Sài Gòn - Vũng Tàu</span><span class="text-sunset">từ 160k</span></a></li>
+<li><a class="hover:text-sunset transition-colors flex items-center justify-between" href="#search-card"><span>Hà Nội - Ninh Bình</span><span class="text-sunset">từ 140k</span></a></li>
+</ul>
+</div>
+<!-- Col 3 -->
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider">Hãng xe đối tác</h4>
+<ul class="flex flex-col gap-2 text-xs">
+<li><a class="hover:text-white transition-colors" href="#">Phương Trang FUTA Bus Lines</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Thành Bưởi Limousine</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Hoa Mai Vũng Tàu VIP</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Sao Việt Hà Nội - Lào Cai</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Kumho Samco Buslines</a></li>
+<li><a class="hover:text-white transition-colors" href="#">An Anh Limousine</a></li>
+</ul>
+</div>
+<!-- Col 4 -->
+<div class="flex flex-col gap-3">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider">Hỗ trợ &amp; Thanh toán</h4>
+<ul class="flex flex-col gap-2 text-xs mb-2">
+<li><a class="hover:text-white transition-colors" href="#">Hướng dẫn đặt vé &amp; Thanh toán</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Quy chế hoạt động sàn TMĐT</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Chính sách hoàn tiền &amp; Đổi trả</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Bảo mật thông tin khách hàng</a></li>
+</ul>
+<span class="text-xs font-semibold text-white/90">Cổng thanh toán bảo mật 100%</span>
+<div class="flex flex-wrap gap-1.5 items-center">
+<span class="px-2 py-0.5 rounded bg-white/10 text-[11px] text-white">Visa</span>
+<span class="px-2 py-0.5 rounded bg-white/10 text-[11px] text-white">Mastercard</span>
+<span class="px-2 py-0.5 rounded bg-white/10 text-[11px] text-white">Napas</span>
+<span class="px-2 py-0.5 rounded bg-white/10 text-[11px] text-white">MoMo</span>
+<span class="px-2 py-0.5 rounded bg-white/10 text-[11px] text-white">VNPAY</span>
+<span class="px-2 py-0.5 rounded bg-white/10 text-[11px] text-white">ZaloPay</span>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/60">
+<p class="text-center md:text-left">
+          © 2025 ĐặtVéXe.vn - Nền tảng du lịch &amp; xe khách liên tỉnh trực tuyến số 1 Việt Nam. Đã đăng ký Bộ Công Thương.
+        </p>
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1 text-emerald-400">
+<span class="material-symbols-outlined text-[16px]">shield</span> An toàn 100%
+          </span>
+<span class="flex items-center gap-1 text-sunset">
+<span class="material-symbols-outlined text-[16px]">bolt</span> Xác nhận vé tức thì
+          </span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactivity Scripts -->
+<script>
+    function setRoute(origin, destination) {
+      const originInput = document.getElementById('input-origin');
+      const destInput = document.getElementById('input-destination');
+      if (originInput && destInput) {
+        originInput.value = origin;
+        destInput.value = destination;
+      }
+      const searchCard = document.getElementById('search-card');
+      if (searchCard) {
+        searchCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    const swapBtn = document.getElementById('btn-swap-location');
+    if (swapBtn) {
+      swapBtn.addEventListener('click', function() {
+        const originInput = document.getElementById('input-origin');
+        const destInput = document.getElementById('input-destination');
+        if (originInput && destInput) {
+          const temp = originInput.value;
+          originInput.value = destInput.value;
+          destInput.value = temp;
+        }
+      });
+    }
+
+    const tabBus = document.getElementById('tab-bus');
+    const tabLimo = document.getElementById('tab-limo');
+    const tabRent = document.getElementById('tab-rent');
+    const tabs = [tabBus, tabLimo, tabRent];
+
+    tabs.forEach(tab => {
+      if (tab) {
+        tab.addEventListener('click', function() {
+          tabs.forEach(t => {
+            if (t) {
+              t.classList.remove('bg-white', 'text-primary', 'shadow');
+              t.classList.add('text-white/85', 'hover:text-white', 'hover:bg-white/10');
+            }
+          });
+          this.classList.remove('text-white/85', 'hover:text-white', 'hover:bg-white/10');
+          this.classList.add('bg-white', 'text-primary', 'shadow');
+        });
+      }
+    });
+  </script>
+</body></html>

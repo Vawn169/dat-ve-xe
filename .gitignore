@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Ghi chú bàn giao nội bộ, không đưa lên GitHub
+BAN-GIAO.md

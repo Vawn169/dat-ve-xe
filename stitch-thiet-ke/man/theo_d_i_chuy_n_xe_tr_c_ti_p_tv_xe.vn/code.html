@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>ĐặtVéXe.vn - Hệ thống đặt vé xe liên tỉnh</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#213145","outline":"#6e7a74","on-error":"#ffffff","tertiary-fixed-dim":"#ffb95f","primary-container":"#0b7a5e","primary-fixed":"#98f5d2","on-error-container":"#93000a","on-secondary":"#ffffff","on-primary-fixed":"#002117","on-primary-fixed-variant":"#00513d","surface-dim":"#cbdbf5","on-primary-container":"#a7ffdd","error":"#ba1a1a","on-surface-variant":"#3e4944","on-tertiary-fixed-variant":"#653e00","on-tertiary":"#ffffff","secondary-fixed":"#6ffbbe","on-secondary-fixed-variant":"#005236","on-secondary-container":"#00714d","surface-container-lowest":"#ffffff","inverse-primary":"#7cd8b6","surface-container":"#e5eeff","surface-variant":"#d3e4fe","surface-tint":"#006c52","surface-container-highest":"#d3e4fe","on-primary":"#ffffff","secondary-container":"#6cf8bb","on-secondary-fixed":"#002113","on-background":"#0b1c30","surface-container-low":"#eff4ff","surface-container-high":"#dce9ff","primary":"#005f48","on-surface":"#0b1c30","surface-bright":"#f8f9ff","on-tertiary-fixed":"#2a1700","inverse-on-surface":"#eaf1ff","outline-variant":"#bdc9c2","tertiary":"#764900","error-container":"#ffdad6","tertiary-fixed":"#ffddb8","on-tertiary-container":"#ffead5","background":"#f8f9ff","tertiary-container":"#975f00","surface":"#f8f9ff","secondary-fixed-dim":"#4edea3","secondary":"#006c49","primary-fixed-dim":"#7cd8b6"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","margin":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xs":"0.25rem","gutter-mobile":"1rem","margin-mobile":"1rem","gutter":"1.5rem"},fontFamily:{"label-lg":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"headline-lg":["Be Vietnam Pro"],"display":["Be Vietnam Pro"],"headline-sm":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"display-mobile":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"headline-md":["Be Vietnam Pro"]},fontSize:{"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"display":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"26px",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"display-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.01em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"30px",letterSpacing:"-0.005em",fontWeight:"600"}]}}}};</script></head><body class="min-h-full bg-background font-body-md text-on-surface antialiased flex flex-col"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(15,23,42,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-xs text-primary transition-opacity hover:opacity-90" data-path="trang-chu" href="#"><span class="material-symbols-outlined text-[32px] text-primary">directions_bus</span><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight font-bold text-primary">ĐặtVéXe<span class="text-tertiary-container">.vn</span></span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Intercity Transit</span></div></a><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg shadow-sm"><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all rounded-lg" data-path="tra-cuu-ve" href="#">Tra cứu vé</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all rounded-lg" data-path="ve-cua-toi" href="#">Vé của tôi</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all rounded-lg" data-path="theo-doi-chuyen" href="#">Theo dõi chuyến</a><a class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all rounded-lg" data-path="ho-tro" href="#">Hỗ trợ</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container-low"><span class="material-symbols-outlined text-[20px] text-primary">call</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">Hotline 24/7</span><a class="font-label-lg text-label-lg text-primary hover:underline" href="tel:19008888">1900 8888</a></div></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer transition-transform hover:scale-105"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-20 flex-1 bg-background"><div class="flex flex-col w-full relative">
+<!-- Interactive Live Tracking Hub -->
+<div class="relative w-full h-[calc(100vh-5rem)] min-h-[760px] overflow-hidden bg-surface-container-low flex">
+<!-- Vector Stylized Geographic Map (Southern Vietnam: TP.HCM to Da Lat via QL20) -->
+<div class="absolute inset-0 w-full h-full select-none overflow-hidden cursor-grab active:cursor-grabbing" id="live-map-canvas">
+<svg class="w-full h-full" preserveaspectratio="xMidYMid slice" viewbox="0 0 1600 950" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Map Background Patterns & Gradients -->
+<radialgradient cx="50%" cy="50%" id="beaconGlow" r="50%">
+<stop offset="0%" stop-color="#0b7a5e" stop-opacity="0.6"></stop>
+<stop offset="60%" stop-color="#0b7a5e" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#0b7a5e" stop-opacity="0"></stop>
+</radialgradient>
+<lineargradient id="passedRouteGradient" x1="0%" x2="100%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#3e4944" stop-opacity="0.5"></stop>
+<stop offset="100%" stop-color="#6e7a74" stop-opacity="0.7"></stop>
+</lineargradient>
+<lineargradient id="activeRouteGradient" x1="0%" x2="100%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#0b7a5e"></stop>
+<stop offset="50%" stop-color="#006c49"></stop>
+<stop offset="100%" stop-color="#4edea3"></stop>
+</lineargradient>
+<filter height="140%" id="shadowFilter" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="8" flood-color="#0b1c30" flood-opacity="0.18" stddeviation="6"></fedropshadow>
+</filter>
+</defs>
+<!-- Base Topography Grid & Terrain Shapes -->
+<rect fill="#f0f5fd" height="950" width="1600"></rect>
+<!-- Subtle Provincial Contours (Dong Nai, Lam Dong Plateau) -->
+<path d="M -50 900 C 250 820, 420 890, 750 780 C 1050 680, 1200 450, 1650 380 L 1650 950 L -50 950 Z" fill="#e6f0fa" opacity="0.75"></path>
+<path d="M 680 520 C 820 480, 1050 390, 1280 290 C 1450 210, 1550 180, 1650 120 L 1650 600 C 1350 650, 1000 780, 680 520 Z" fill="#dbe9f8" opacity="0.6"></path>
+<!-- Mountainous Region Hatching / Hill shading around Bao Loc & Da Lat -->
+<g opacity="0.25" stroke="#98aed0" stroke-linecap="round" stroke-width="1.5">
+<path d="M 860 480 Q 880 460 900 480 M 890 470 Q 910 450 930 470"></path>
+<path d="M 1040 370 Q 1065 340 1090 370 M 1075 355 Q 1100 330 1125 355"></path>
+<path d="M 1260 210 Q 1285 180 1310 210 M 1300 195 Q 1325 170 1350 195"></path>
+<path d="M 1340 160 Q 1370 130 1400 160 M 1380 145 Q 1410 120 1440 145"></path>
+</g>
+<!-- Waterways & Tri An Reservoir abstraction -->
+<path d="M 380 620 C 440 590, 480 640, 560 600 C 620 570, 590 520, 650 490" fill="none" opacity="0.65" stroke="#bed7f7" stroke-linecap="round" stroke-width="12"></path>
+<!-- Dong Nai River Branch -->
+<path d="M 180 880 Q 280 760 380 740 Q 520 720 620 630" fill="none" opacity="0.5" stroke="#bed7f7" stroke-linecap="round" stroke-width="6"></path>
+<!-- Minor Road Networks -->
+<g fill="none" stroke="#d5e1f0" stroke-linejoin="round" stroke-width="2.5">
+<path d="M 100 790 L 320 830 L 460 880"></path>
+<path d="M 420 700 L 510 790 L 610 820"></path>
+<path d="M 680 530 L 760 620 L 920 650"></path>
+<path d="M 880 430 L 1020 520 L 1150 480"></path>
+<path d="M 1210 260 L 1320 310 L 1490 280"></path>
+</g>
+<!-- Highway QL20 Route Geometry -->
+<!-- SECTION 1: Completed Travel (TP.HCM -> Dau Giay -> Dinh Quan -> Madagui ~ 185km) -->
+<path d="M 220 840 C 270 820, 340 760, 440 720 C 510 690, 590 640, 670 590 C 720 560, 770 520, 830 490" fill="none" id="route-completed" stroke="url(#passedRouteGradient)" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<!-- SECTION 2: Remaining Travel (Current location near Madagui -> Bao Loc -> Di Linh -> Duc Trong -> Da Lat ~ 120km) -->
+<path d="M 830 490 C 890 460, 960 410, 1020 380 C 1110 340, 1180 290, 1260 230 C 1320 185, 1370 160, 1420 130" fill="none" id="route-upcoming" stroke="url(#activeRouteGradient)" stroke-dasharray="10 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<!-- Milestone Markers On Map -->
+<!-- Stop 1: BX Miền Đông Mới (Checked) -->
+<g transform="translate(220, 840)">
+<circle fill="#ffffff" filter="url(#shadowFilter)" r="18"></circle>
+<circle fill="#e5eeff" r="12"></circle>
+<path d="M -5 0 L -2 3 L 5 -4" fill="none" stroke="#005f48" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<rect fill="#ffffff" filter="url(#shadowFilter)" height="26" rx="6" width="170" x="-85" y="24"></rect>
+<text fill="#213145" font-family="Be Vietnam Pro" font-size="11" font-weight="600" text-anchor="middle" x="0" y="41">BX Miền Đông (22:15)</text>
+</g>
+<!-- Stop 2: Ngã 3 Dầu Giây (Checked) -->
+<g transform="translate(440, 720)">
+<circle fill="#ffffff" filter="url(#shadowFilter)" r="16"></circle>
+<circle fill="#e5eeff" r="10"></circle>
+<path d="M -4 0 L -1 3 L 4 -3" fill="none" stroke="#005f48" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+<rect fill="#ffffff" filter="url(#shadowFilter)" height="24" opacity="0.9" rx="6" width="140" x="-70" y="-38"></rect>
+<text fill="#3e4944" font-family="Be Vietnam Pro" font-size="11" font-weight="500" text-anchor="middle" x="0" y="-22">Dầu Giây (23:45)</text>
+</g>
+<!-- Stop 3: Định Quán / Tân Phú (Checked) -->
+<g transform="translate(670, 590)">
+<circle fill="#ffffff" filter="url(#shadowFilter)" r="16"></circle>
+<circle fill="#e5eeff" r="10"></circle>
+<path d="M -4 0 L -1 3 L 4 -3" fill="none" stroke="#005f48" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+<rect fill="#ffffff" filter="url(#shadowFilter)" height="24" opacity="0.9" rx="6" width="150" x="-75" y="22"></rect>
+<text fill="#3e4944" font-family="Be Vietnam Pro" font-size="11" font-weight="500" text-anchor="middle" x="0" y="38">Định Quán (01:10)</text>
+</g>
+<!-- Stop 4: Trạm Dừng Chân Bảo Lộc (UPCOMING - HIGHLIGHTED) -->
+<g transform="translate(1020, 380)">
+<!-- Pulsing Rings -->
+<circle fill="#0b7a5e" opacity="0.15" r="36">
+<animate attributename="r" dur="2.5s" repeatcount="indefinite" values="24;42;24"></animate>
+<animate attributename="opacity" dur="2.5s" repeatcount="indefinite" values="0.25;0.05;0.25"></animate>
+</circle>
+<circle fill="#0b7a5e" filter="url(#shadowFilter)" r="22"></circle>
+<circle fill="#a7ffdd" r="8"></circle>
+<!-- Stop Card Tooltip -->
+<g transform="translate(0, -78)">
+<rect fill="#0b1c30" filter="url(#shadowFilter)" height="62" rx="10" width="230" x="-115" y="0"></rect>
+<!-- Triangle pin arrow -->
+<polygon fill="#0b1c30" points="-8,62 0,72 8,62"></polygon>
+<rect fill="#0b7a5e" height="18" rx="4" width="62" x="-105" y="8"></rect>
+<text fill="#ffffff" font-family="Be Vietnam Pro" font-size="9" font-weight="700" text-anchor="middle" x="-74" y="20">SẮP ĐẾN</text>
+<text fill="#ffb95f" font-family="Be Vietnam Pro" font-size="11" font-weight="600" x="-35" y="21">Nghỉ 20 phút</text>
+<text fill="#ffffff" font-family="Be Vietnam Pro" font-size="13" font-weight="700" x="-105" y="42">Trạm Dừng Chân Mây</text>
+<text fill="#cbdbf5" font-family="Be Vietnam Pro" font-size="10" font-weight="400" x="-105" y="54">TP. Bảo Lộc · Cách 28 km (~40p)</text>
+</g>
+</g>
+<!-- Stop 5: Đèo Prenn -->
+<g transform="translate(1260, 230)">
+<circle fill="#ffffff" filter="url(#shadowFilter)" r="14"></circle>
+<circle fill="#bdc9c2" r="6"></circle>
+<rect fill="#ffffff" filter="url(#shadowFilter)" height="24" opacity="0.9" rx="6" width="130" x="-65" y="18"></rect>
+<text fill="#6e7a74" font-family="Be Vietnam Pro" font-size="11" font-weight="500" text-anchor="middle" x="0" y="34">Đèo Prenn (04:45)</text>
+</g>
+<!-- Final Destination: Bến xe Liên tỉnh Đà Lạt -->
+<g transform="translate(1420, 130)">
+<circle fill="#ffddb8" opacity="0.5" r="26"></circle>
+<circle fill="#764900" filter="url(#shadowFilter)" r="18"></circle>
+<circle fill="#ffffff" r="7"></circle>
+<!-- Flag Pin Tooltip -->
+<g transform="translate(0, -56)">
+<rect fill="#ffffff" filter="url(#shadowFilter)" height="46" rx="8" width="180" x="-90" y="0"></rect>
+<polygon fill="#ffffff" points="-6,46 0,54 6,46"></polygon>
+<text fill="#764900" font-family="Be Vietnam Pro" font-size="12" font-weight="700" text-anchor="middle" x="0" y="20">Đích đến: BX Đà Lạt</text>
+<text fill="#3e4944" font-family="Be Vietnam Pro" font-size="11" font-weight="500" text-anchor="middle" x="0" y="36">Dự kiến 05:30 (Sáng mai)</text>
+</g>
+</g>
+<!-- LIVE BUS ICON & BEACON (Currently located along QL20 between Dinh Quan and Bao Loc) -->
+<g id="live-bus-marker" transform="translate(830, 490)">
+<!-- Pulsing Radar Glow -->
+<circle fill="url(#beaconGlow)" r="52">
+<animate attributename="r" dur="2s" repeatcount="indefinite" values="32;58;32"></animate>
+<animate attributename="opacity" dur="2s" repeatcount="indefinite" values="0.8;0.2;0.8"></animate>
+</circle>
+<!-- Outer Heading Ring -->
+<circle fill="#ffffff" filter="url(#shadowFilter)" r="22"></circle>
+<circle fill="#0b7a5e" r="18"></circle>
+<!-- Bus Pictogram -->
+<path d="M -8 -8 C -8 -10, -6 -11, 0 -11 C 6 -11, 8 -10, 8 -8 L 8 6 C 8 8, 6 9, 0 9 C -6 9, -8 8, -8 6 Z" fill="#ffffff"></path>
+<rect fill="#00513d" height="4" rx="1.5" width="12" x="-6" y="-7"></rect>
+<circle cx="-4" cy="5" fill="#00513d" r="1.5"></circle>
+<circle cx="4" cy="5" fill="#00513d" r="1.5"></circle>
+<circle cx="-5" cy="1" fill="#ffb95f" r="1"></circle>
+<circle cx="5" cy="1" fill="#ffb95f" r="1"></circle>
+<!-- Real-Time Floating Badge on Bus -->
+<g transform="translate(30, -22)">
+<rect fill="#002117" filter="url(#shadowFilter)" height="44" opacity="0.92" rx="8" width="146" x="0" y="0"></rect>
+<circle cx="14" cy="16" fill="#4edea3" r="4">
+<animate attributename="opacity" dur="1.2s" repeatcount="indefinite" values="1;0.3;1"></animate>
+</circle>
+<text fill="#a7ffdd" font-family="Be Vietnam Pro" font-size="11" font-weight="700" x="24" y="20">62 km/h · GPS LIVE</text>
+<text fill="#ffffff" font-family="Be Vietnam Pro" font-size="10" font-weight="400" x="14" y="35">Xe 51B-892.45</text>
+</g>
+</g>
+</svg>
+</div>
+<!-- Map Floating Controls & Indicators (Right-Hand Side) -->
+<div class="absolute right-6 top-6 z-20 flex flex-col items-end gap-space-sm">
+<!-- Traffic Condition Pill -->
+<div class="flex items-center gap-2 bg-surface-container-lowest/95 backdrop-blur-md px-3.5 py-2 rounded-full shadow-md text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+<span class="font-label-md text-label-md text-secondary">Tuyến QL20: Thông thoáng</span>
+<span class="material-symbols-outlined text-[16px] text-outline">info</span>
+</div>
+<!-- Map Layer Switcher & Tools -->
+<div class="flex flex-col bg-surface-container-lowest/95 backdrop-blur-md rounded-xl shadow-lg p-1.5 gap-1">
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-primary hover:bg-primary-fixed/30 transition-colors" id="btn-recenter" title="Khóa vị trí xe">
+<span class="material-symbols-outlined text-[22px]">my_location</span>
+</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" id="btn-zoom-in" title="Phóng to">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" id="btn-zoom-out" title="Thu nhỏ">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="h-[1px] w-full bg-surface-container"></div>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" id="btn-layer" title="Lớp bản đồ">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</button>
+</div>
+<!-- Quick Compass -->
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-md flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px] transform -rotate-45">navigation</span>
+</div>
+</div>
+<!-- Live Telemetry Floating Bottom Right Bar (Weather at Destination) -->
+<div class="absolute right-6 bottom-6 z-20 hidden md:flex items-center gap-space-md bg-surface-container-lowest/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">cloudy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Thời tiết TP. Đà Lạt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">16°C · Sương mù nhẹ</span>
+</div>
+</div>
+<div class="h-8 w-[1px] bg-surface-container"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Độ ẩm &amp; Tầm nhìn</span>
+<span class="font-label-lg text-label-lg text-primary">88% · 7.5 km</span>
+</div>
+</div>
+<!-- MAIN FLOATING TRACKING DASHBOARD (Top Centered & Expanded) -->
+<div class="absolute top-6 left-6 right-6 md:right-auto md:w-[780px] lg:w-[840px] z-30 pointer-events-auto flex flex-col gap-space-sm max-h-[calc(100vh-6.5rem)] overflow-y-auto pr-1">
+<!-- Primary Glass Control Card -->
+<div class="bg-surface-container-lowest/95 backdrop-blur-xl rounded-2xl shadow-2xl p-space-md lg:p-space-lg flex flex-col gap-space-md">
+<!-- Header Row: Carrier, Status, Bus Info -->
+<div class="flex flex-wrap items-start justify-between gap-y-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[28px]">directions_bus</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface">Phù Sa Express</h1>
+<span class="px-2.5 py-0.5 rounded-full font-label-md text-label-md bg-secondary-container text-on-secondary-container font-semibold">
+                  Ghế A05
+                </span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="font-semibold text-on-surface">Biển số: 51B-892.45</span>
+<span>•</span>
+<span>Limousine 34 phòng cao cấp</span>
+<span>•</span>
+<span class="font-mono text-outline">Mã: VEG5VGW3Y9</span>
+</div>
+</div>
+</div>
+<!-- Pulsing Status Badge -->
+<div class="flex items-center gap-2.5 bg-surface-container-low px-3.5 py-1.5 rounded-full">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<span class="font-label-md text-label-md font-bold text-primary">Đang di chuyển (GPS Live)</span>
+<button class="text-on-surface-variant hover:text-primary transition-transform active:rotate-180" id="refresh-telemetry" title="Làm mới GPS">
+<span class="material-symbols-outlined text-[16px]">autorenew</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Metrics Grid (3 Pillars) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 bg-surface-container-low p-3.5 rounded-xl">
+<!-- Metric 1: Next Stop -->
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">store</span>
+<span>Điểm dừng kế tiếp</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-bold text-tertiary truncate">Trạm Bảo Lộc</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Còn ~40 phút (28 km)</p>
+</div>
+<!-- Metric 2: Destination ETA -->
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span>Dự kiến đến bến</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-bold text-primary">05:30 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">(Sáng mai)</span></p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bến xe Đà Lạt (P.3)</p>
+</div>
+<!-- Metric 3: Mileage Progress -->
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">speed</span>
+<span>Tốc độ &amp; Tiến độ</span>
+</div>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">62 km/h <span class="text-secondary font-label-md text-label-md font-semibold">(60%)</span></p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Đã đi 185 / 305 km</p>
+</div>
+</div>
+<!-- Dynamic Timeline & Milestone Journey Rail -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">route</span>
+              Lộ trình di chuyển thực tế (QL20)
+            </span>
+<span class="text-outline" id="update-timer">Cập nhật 10 giây trước</span>
+</div>
+<!-- Progress Bar Container -->
+<div class="relative w-full h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-secondary to-primary-container rounded-full w-[60%] transition-all duration-700"></div>
+</div>
+<!-- 6 Milestone Nodes Row -->
+<div class="grid grid-cols-6 gap-1 pt-1 text-center">
+<!-- Node 1 -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface mt-1 truncate w-full">BX M.Đông</span>
+<span class="font-label-sm text-label-sm text-outline">22:15</span>
+</div>
+<!-- Node 2 -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface mt-1 truncate w-full">Dầu Giây</span>
+<span class="font-label-sm text-label-sm text-outline">23:45</span>
+</div>
+<!-- Node 3 -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface mt-1 truncate w-full">Định Quán</span>
+<span class="font-label-sm text-label-sm text-outline">01:10</span>
+</div>
+<!-- Node 4 (ACTIVE / SẮP TỚI) -->
+<div class="flex flex-col items-center relative">
+<div class="w-6 h-6 -my-0.5 rounded-full bg-tertiary-container ring-4 ring-tertiary-fixed flex items-center justify-center text-on-tertiary animate-bounce">
+<span class="material-symbols-outlined text-[14px]">local_cafe</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-tertiary-container mt-0.5 truncate w-full">Trạm B.Lộc</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">02:20 (Nghỉ 20')</span>
+</div>
+<!-- Node 5 -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-outline">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+</div>
+<span class="font-label-sm text-label-sm font-medium text-on-surface-variant mt-1 truncate w-full">Đèo Prenn</span>
+<span class="font-label-sm text-label-sm text-outline">04:45</span>
+</div>
+<!-- Node 6 -->
+<div class="flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[13px]">flag</span>
+</div>
+<span class="font-label-sm text-label-sm font-medium text-on-surface-variant mt-1 truncate w-full">BX Đà Lạt</span>
+<span class="font-label-sm text-label-sm text-outline">05:30</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Bar -->
+<div class="flex flex-wrap items-center gap-space-sm pt-2">
+<!-- Driver Phone CTA -->
+<a class="flex-1 min-w-[200px] h-12 bg-primary hover:bg-primary-container text-on-primary rounded-xl flex items-center justify-center gap-2 font-label-lg text-label-lg transition-transform hover:-translate-y-0.5 shadow-md" href="tel:0908456789">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>Gọi tài xế (Bác Hùng)</span>
+</a>
+<!-- Share Location CTA -->
+<button class="flex-1 min-w-[190px] h-12 bg-surface-container hover:bg-surface-variant text-on-surface rounded-xl flex items-center justify-center gap-2 font-label-lg text-label-lg transition-colors" id="btn-share-trip">
+<span class="material-symbols-outlined text-[20px] text-primary">share</span>
+<span>Chia sẻ hành trình</span>
+</button>
+<!-- QR Boarding Pass CTA -->
+<button class="h-12 px-4 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-xl flex items-center justify-center gap-2 font-label-lg text-label-lg transition-colors" id="btn-show-qr">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+<span>Vé QR</span>
+</button>
+<!-- Report Issue CTA -->
+<button class="h-12 px-3 text-error hover:bg-error-container/30 rounded-xl flex items-center justify-center transition-colors" id="btn-report-issue" title="Báo cáo sự cố khẩn cấp">
+<span class="material-symbols-outlined text-[22px]">report_problem</span>
+</button>
+</div>
+</div>
+<!-- Expandable Trip Dossier & Passenger Drawer -->
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded-2xl shadow-xl p-space-md flex flex-col gap-3">
+<div class="flex items-center justify-between cursor-pointer" id="toggle-trip-details">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">badge</span>
+<span class="font-label-lg text-label-lg text-on-surface">Thông tin hành khách &amp; Tiện ích xe</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform" id="dossier-arrow">expand_more</span>
+</div>
+<!-- Dossier Content (Collapsible / Default Expanded) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-1" id="dossier-body">
+<!-- Passenger & Driver Profile Card -->
+<div class="bg-surface-container-low p-3.5 rounded-xl flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Hành khách</span>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed/40 px-2 py-0.5 rounded">Vé đã thanh toán</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold">
+                NT
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Nguyễn Minh Tuấn</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0912.389.xxx · Phòng VIP A05 (Tầng dưới)</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-surface-container"></div>
+<!-- Driver Info -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">airline_seat_recline_normal</span>
+<span class="font-label-md text-label-md text-on-surface">Tài xế chính: <strong>Trần Văn Hùng</strong></span>
+</div>
+<div class="flex items-center gap-1 bg-tertiary-fixed/60 px-2 py-0.5 rounded text-tertiary font-label-sm text-label-sm font-bold">
+<span>★ 4.9</span>
+<span class="font-normal text-on-tertiary-fixed-variant">(1.200+ chuyến)</span>
+</div>
+</div>
+</div>
+<!-- Bus Amenities & Safety Guarantee -->
+<div class="bg-surface-container-low p-3.5 rounded-xl flex flex-col justify-between gap-2.5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-2">Tiện ích đang hoạt động trên xe</span>
+<div class="grid grid-cols-2 gap-2 font-label-md text-label-md text-on-surface">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-2.5 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">wifi</span>
+<span>Wifi 5G Phù Sa</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-2.5 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">bolt</span>
+<span>Sạc Type-C &amp; USB</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-2.5 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">spa</span>
+<span>Giường Massage 3D</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest px-2.5 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">water_drop</span>
+<span>Nước &amp; Khăn lạnh</span>
+</div>
+</div>
+</div>
+<!-- Safe Transit Pledge Ribbon -->
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Xe đạt chuẩn an toàn GS24 · Giám sát hành trình liên tục</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SHARE TRIP TOAST / MODAL DIALOG (HIDDEN BY DEFAULT) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden" id="share-modal">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg max-w-md w-full mx-4 shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[24px]">share_location</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Chia sẻ hành trình xe</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="close-share-modal">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Gửi liên kết theo dõi trực tiếp vị trí xe, giờ đến trạm và tài xế cho người thân qua Zalo hoặc tin nhắn SMS.
+        </p>
+<div class="flex items-center gap-2 bg-surface-container-low p-2 rounded-xl">
+<input class="bg-transparent flex-1 font-mono font-body-sm text-body-sm px-2 text-on-surface outline-none" readonly="" value="https://datvexe.vn/tracking/VEG5VGW3Y9"/>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-3 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1 transition-colors" id="btn-copy-link">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Sao chép</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-3 pt-2">
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px] text-primary">chat</span>
+<span>Gửi qua Zalo</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[20px] text-tertiary">sms</span>
+<span>Tin nhắn SMS</span>
+</button>
+</div>
+</div>
+</div>
+<!-- QR TICKET MODAL (HIDDEN BY DEFAULT) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm hidden" id="qr-modal">
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg max-w-sm w-full mx-4 shadow-2xl flex flex-col items-center gap-space-md text-center">
+<div class="w-full flex justify-end">
+<button class="text-on-surface-variant hover:text-on-surface" id="close-qr-modal">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">qr_code_scanner</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Thẻ Lên Xe Điện Tử</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Xuất trình mã này cho phụ xe khi lên hoặc đổi tài</p>
+</div>
+<!-- Stylized QR Code Mock -->
+<div class="p-4 bg-surface-container-lowest rounded-2xl shadow-inner border-4 border-surface-container flex flex-col items-center">
+<svg class="w-48 h-48" fill="currentColor" viewbox="0 0 100 100">
+<!-- Position Anchors -->
+<rect fill="#0b1c30" height="26" rx="4" width="26" x="5" y="5"></rect>
+<rect fill="#ffffff" height="18" rx="2" width="18" x="9" y="9"></rect>
+<rect fill="#0b7a5e" height="10" width="10" x="13" y="13"></rect>
+<rect fill="#0b1c30" height="26" rx="4" width="26" x="69" y="5"></rect>
+<rect fill="#ffffff" height="18" rx="2" width="18" x="73" y="9"></rect>
+<rect fill="#0b7a5e" height="10" width="10" x="77" y="13"></rect>
+<rect fill="#0b1c30" height="26" rx="4" width="26" x="5" y="69"></rect>
+<rect fill="#ffffff" height="18" rx="2" width="18" x="9" y="73"></rect>
+<rect fill="#0b7a5e" height="10" width="10" x="13" y="77"></rect>
+<!-- Data Grid Mock -->
+<g fill="#0b1c30">
+<rect height="6" width="6" x="36" y="8"></rect>
+<rect height="6" width="8" x="46" y="8"></rect>
+<rect height="8" width="6" x="58" y="12"></rect>
+<rect height="6" width="8" x="36" y="20"></rect>
+<rect height="8" width="6" x="48" y="22"></rect>
+<rect height="6" width="8" x="8" y="38"></rect>
+<rect height="6" width="6" x="20" y="42"></rect>
+<rect fill="#0b7a5e" height="10" width="10" x="36" y="38"></rect>
+<rect height="14" width="6" x="52" y="38"></rect>
+<rect height="6" width="12" x="64" y="40"></rect>
+<rect height="6" width="8" x="82" y="38"></rect>
+<rect height="8" width="8" x="38" y="54"></rect>
+<rect height="6" width="10" x="50" y="58"></rect>
+<rect height="14" width="8" x="68" y="52"></rect>
+<rect height="10" width="8" x="82" y="58"></rect>
+<rect height="12" width="6" x="36" y="70"></rect>
+<rect height="6" width="14" x="48" y="70"></rect>
+<rect height="8" width="6" x="66" y="72"></rect>
+<rect height="12" width="12" x="78" y="74"></rect>
+<rect height="8" width="8" x="48" y="82"></rect>
+</g>
+</svg>
+<span class="font-mono font-headline-sm text-headline-sm font-bold tracking-wider text-on-surface mt-3">VEG5-VGW3-Y9</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Phòng A05 · SG ➔ ĐL (22:00 28/11)</p>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript for Live Simulation -->
+<script>
+    (function initLiveTracking() {
+      // Periodic Telemetry Refresh Simulation
+      let secondsAgo = 10;
+      const updateTimerEl = document.getElementById('update-timer');
+      const busMarker = document.getElementById('live-bus-marker');
+      const btnRecenter = document.getElementById('btn-recenter');
+      const btnRefresh = document.getElementById('refresh-telemetry');
+      
+      setInterval(() => {
+        secondsAgo += 1;
+        if (secondsAgo >= 25) {
+          secondsAgo = 1;
+          // Pulse the bus slightly
+          if (busMarker) {
+            busMarker.classList.add('transition-transform', 'duration-500');
+          }
+        }
+        if (updateTimerEl) {
+          updateTimerEl.textContent = `Cập nhật ${secondsAgo} giây trước`;
+        }
+      }, 1000);
+
+      if (btnRefresh) {
+        btnRefresh.addEventListener('click', () => {
+          secondsAgo = 0;
+          if (updateTimerEl) updateTimerEl.textContent = 'Vừa cập nhật tức thì';
+        });
+      }
+
+      if (btnRecenter && busMarker) {
+        btnRecenter.addEventListener('click', () => {
+          busMarker.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+        });
+      }
+
+      // Dossier Expand / Collapse
+      const toggleDossier = document.getElementById('toggle-trip-details');
+      const dossierBody = document.getElementById('dossier-body');
+      const dossierArrow = document.getElementById('dossier-arrow');
+
+      if (toggleDossier && dossierBody && dossierArrow) {
+        toggleDossier.addEventListener('click', () => {
+          dossierBody.classList.toggle('hidden');
+          dossierArrow.classList.toggle('rotate-180');
+        });
+      }
+
+      // Modals Logic
+      const shareModal = document.getElementById('share-modal');
+      const btnShare = document.getElementById('btn-share-trip');
+      const closeShare = document.getElementById('close-share-modal');
+      const btnCopy = document.getElementById('btn-copy-link');
+
+      if (btnShare && shareModal && closeShare) {
+        btnShare.addEventListener('click', () => shareModal.classList.remove('hidden'));
+        closeShare.addEventListener('click', () => shareModal.classList.add('hidden'));
+      }
+
+      if (btnCopy) {
+        btnCopy.addEventListener('click', () => {
+          btnCopy.innerHTML = '<span class="material-symbols-outlined text-[16px]">done</span><span>Đã chép</span>';
+          setTimeout(() => {
+            btnCopy.innerHTML = '<span class="material-symbols-outlined text-[16px]">content_copy</span><span>Sao chép</span>';
+          }, 2000);
+        });
+      }
+
+      const qrModal = document.getElementById('qr-modal');
+      const btnShowQr = document.getElementById('btn-show-qr');
+      const closeQr = document.getElementById('close-qr-modal');
+
+      if (btnShowQr && qrModal && closeQr) {
+        btnShowQr.addEventListener('click', () => qrModal.classList.remove('hidden'));
+        closeQr.addEventListener('click', () => qrModal.classList.add('hidden'));
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low py-space-xl mt-auto"><div class="max-w-[1280px] mx-auto px-gutter"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-lg"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-primary mb-space-xs"><span class="material-symbols-outlined text-[26px]">directions_bus</span><span class="font-headline-sm text-headline-sm font-bold">ĐặtVéXe.vn</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Nền tảng đặt vé xe khách liên tỉnh chất lượng cao, kết nối trực tiếp hàng nghìn nhà xe uy tín trên toàn quốc.</p><div class="flex items-center gap-space-xs mt-space-xs"><span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span><span class="font-label-sm text-label-sm text-on-surface-variant">Chứng nhận Bộ Công Thương</span></div></div><div><h4 class="font-label-lg text-label-lg text-on-surface mb-space-sm">Tuyến đường phổ biến</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">Sài Gòn - Đà Lạt</a></li><li><a class="hover:text-primary transition-colors" href="#">Hà Nội - Sapa</a></li><li><a class="hover:text-primary transition-colors" href="#">Đà Nẵng - Quy Nhơn</a></li><li><a class="hover:text-primary transition-colors" href="#">Sài Gòn - Vũng Tàu</a></li></ul></div><div><h4 class="font-label-lg text-label-lg text-on-surface mb-space-sm">Về chúng tôi</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">Giới thiệu ĐặtVéXe</a></li><li><a class="hover:text-primary transition-colors" href="#">Quy chế hoạt động</a></li><li><a class="hover:text-primary transition-colors" href="#">Chính sách bảo mật</a></li><li><a class="hover:text-primary transition-colors" href="#">Chính sách hoàn tiền 100%</a></li></ul></div><div><h4 class="font-label-lg text-label-lg text-on-surface mb-space-sm">Tổng đài trợ giúp</h4><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><p><span class="font-label-md text-label-md text-on-surface">Đặt vé &amp; Khiếu nại:</span> 1900 8888</p><p><span class="font-label-md text-label-md text-on-surface">Thời gian:</span> 07:00 - 23:00 hàng ngày</p><p><span class="font-label-md text-label-md text-on-surface">Email:</span> support@datvexe.vn</p></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm"><p>© 2024 ĐặtVéXe.vn JSC. Bảo lưu mọi quyền.</p><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">bolt</span> Xác nhận tức thì</span><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">credit_card</span> Thanh toán an toàn</span></div></div></div></footer></body></html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64" role="img" aria-label="Logo Mây Trắng Limousine (nhà xe mẫu)">
+<rect x="1" y="1" width="198" height="62" rx="12" fill="#fff" stroke="#334155" stroke-width="2"/>
+<rect x="6" y="6" width="52" height="52" rx="10" fill="#334155"/>
+<g transform="translate(0 6) scale(0.8) translate(8 0)"><path d="M16 40 a9 9 0 0 1 2-17 a12 12 0 0 1 23-3 a9 9 0 0 1 5 20 Z" fill="#cbd5e1"/></g>
+<text x="66" y="30" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#334155">Mây Trắng</text>
+<text x="66" y="50" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#64748b" letter-spacing="1">LIMOUSINE</text>
+</svg>

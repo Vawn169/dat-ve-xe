@@ -1,0 +1,57 @@
+OK   F05 Trang chủ: ô tìm chuyến + tuyến phổ biến
+OK   F05 Kết quả tìm chuyến (ngày kia)
+OK   F06/F07 Thẻ chuyến có đánh giá, tiện ích
+OK   F07 Chi tiết chuyến: tiện ích, lộ trình, chính sách, đánh giá
+OK   F08 Sơ đồ ghế 2 tầng
+OK   F10 Có ghế dành cho nữ (màu hồng)
+OK   F08 Kết nối realtime
+OK   F01 Chưa đăng nhập bấm ghế thì hiện hộp đăng nhập (có link Quên mật khẩu)
+OK   F09 Giữ 2 ghế có đồng hồ đếm ngược
+OK   F11/F04 Điểm đón trả, thông tin hành khách từng ghế
+OK   F12 Áp mã GIAM10 thành công → Đã áp dụng GIAM10: −50.000đ Bỏ
+OK   F13 Tạo đơn, chuyển sang thanh toán → VEE54WKSES
+OK   F13 Thanh toán (giả lập) thành công
+OK   F16 Vé của tôi có vé vừa đặt
+OK   F14 Hiện mã QR lên xe
+OK   F15/F19 Có nút tải PDF và Đổi chuyến →  Tải vé PDF Đổi chuyếnHủy véHỗ trợ
+OK   F20 Có chuyến đã đi chờ đánh giá
+OK   F20 Gửi đánh giá
+OK   F19 Đổi chuyến thành công (vé có nhãn Đã đổi chuyến)
+OK   F17 Tra cứu vé không đăng nhập, có nút PDF
+OK   F21 Chatbot tìm chuyến, trả về thẻ chuyến bấm được
+OK   F21 Chatbot trả lời chính sách hành lý → Hành lý: Mỗi khách được mang 20 kg hành lý ký gửi và 1 túi xách nhỏ. Không nhận 
+OK   F22 Câu ngoài phạm vi có nút Gặp nhân viên
+OK   F34 Gửi yêu cầu hỗ trợ
+OK   F02 Quên mật khẩu gửi link
+OK   F03/F04 Tài khoản: hồ sơ, hành khách đã lưu
+OK   F18 Hủy vé, hiện tiền hoàn
+OK   F23 Bán vé tại quầy, thu tiền mặt, xuất vé → VE4X5X3XZ2
+OK   F24 Soát vé bằng nội dung QR → VE4X5X3XZ2 · ghế A01 · Lê Văn Quầy
+OK   F24 Soát lại vé đã soát thì cảnh báo
+OK   F30 Thống kê: 4 chỉ số + biểu đồ doanh thu theo ngày
+OK   F30 Rê chuột vào cột hiện chú thích
+OK   Quản trị · chuyen: có dữ liệu → 15 dòng/khối
+OK   Quản trị · tuyen: có dữ liệu → 4 dòng/khối
+OK   Quản trị · xe: có dữ liệu → 6 dòng/khối
+OK   Quản trị · ve: có dữ liệu → 7 dòng/khối
+OK   Quản trị · nguoi-dung: có dữ liệu → 6 dòng/khối
+OK   Quản trị · ma-giam-gia: có dữ liệu → 3 dòng/khối
+OK   Quản trị · tri-thuc: có dữ liệu → 7 dòng/khối
+OK   Quản trị · chat: có dữ liệu → 1 dòng/khối
+OK   Quản trị · ho-tro: có dữ liệu → 2 dòng/khối
+OK   Quản trị · nhat-ky: có dữ liệu → 4 dòng/khối
+OK   Quản trị · hop-thu: có dữ liệu → 4 dòng/khối
+OK   Hộp thư thử nghiệm: xem nội dung email
+OK   F26 Tạo sơ đồ: báo trước số ghế → Sẽ tạo 12 ghế. Sau khi tạo, bấm từng ghế
+OK   F26 Tạo sơ đồ ghế mới (1 tầng 12 ghế)
+OK   F26 Thêm xe mới
+OK   F26 Trùng biển số thì báo lỗi rõ ràng → Biển số 51B-999.99 đã có trong đội xe
+OK   F26 Sửa xe
+OK   F25 Mở form sửa tuyến có sẵn dữ liệu → TP. Hồ Chí Minh
+OK   F25 Sửa điểm đón của tuyến
+OK   F27 Khóa ghế trên chuyến
+OK   Điện thoại: sơ đồ ghế không tràn ngang → tràn 0px
+OK   Điện thoại: trang quản trị không tràn ngang → tràn 0px
+Lỗi console trình duyệt: không có
+
+Kết quả: 54/54 đạt
