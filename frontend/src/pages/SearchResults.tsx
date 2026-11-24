@@ -20,6 +20,21 @@ import { SeatSelector } from '../components/SeatSelector';
 import { addDays, addMinutes, duration, fmtDate, fmtTime, fmtYmd, hourVN, mapsLink, money, vnToday } from '../format';
 import type { ReviewList, TripDetail, TripSummary } from '../types';
 
+/** Ảnh nền thành phố đến ở đầu trang kết quả (ảnh trong public/du-lich, nguồn ghi trong nguon-anh.json) */
+type CityPhoto = { img: string; tagline: string; credit?: { author: string; license: string; source: string } };
+const CITY_PHOTO: Record<string, CityPhoto> = {
+  'hải phòng': { img: 'hai-phong.jpg', tagline: 'Thành phố hoa phượng đỏ · vịnh Lan Hạ, Cát Bà', credit: { author: 'Velvet', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Lan_Ha_bay_jonques.jpg' } },
+  'đà lạt': { img: 'da-lat.jpg', tagline: 'Thành phố ngàn hoa, sương mù và đồi thông' },
+  'nha trang': { img: 'nha-trang.jpg', tagline: 'Vịnh biển xanh trong, cát trắng' },
+  'cần thơ': { img: 'can-tho.jpg', tagline: 'Tây Đô sông nước, cầu Cần Thơ', credit: { author: 'Tuong Lam Photos', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Cau-can-tho-tuonglamphotos.jpg' } },
+  'tp. hồ chí minh': { img: 'tp-ho-chi-minh.jpg', tagline: 'Thành phố không ngủ bên sông Sài Gòn', credit: { author: 'Radek Kucharski', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Saigon_at_Blue_Hour.jpg' } },
+  'vũng tàu': { img: 'vung-tau-lon.jpg', tagline: 'Biển xanh gần Sài Gòn, bãi Trước', credit: { author: 'NDTK08', license: 'CC BY 4.0', source: 'https://commons.wikimedia.org/wiki/File:Bai_Truoc_Vung_Tau.jpg' } },
+  'sa pa': { img: 'sa-pa.jpg', tagline: 'Ruộng bậc thang và đỉnh Fansipan' },
+  'hà nội': { img: 'ha-noi.jpg', tagline: 'Thủ đô nghìn năm văn hiến · hồ Hoàn Kiếm', credit: { author: 'P. Hughes', license: 'CC BY 4.0', source: 'https://commons.wikimedia.org/wiki/File:Hanoi_-_Turtle_Tower_(Th%C3%A1p_R%C3%B9a),_Ho%C3%A0n_Ki%E1%BA%BFm_Lake.jpg' } },
+};
+CITY_PHOTO['hồ chí minh'] = CITY_PHOTO['tp. hồ chí minh'];
+const cityPhoto = (city: string): CityPhoto | null => CITY_PHOTO[city.trim().toLowerCase()] ?? null;
+
 const TIME_SLOTS = [
   { value: 'early', label: 'Sáng sớm', range: '00:00 – 06:00', from: 0, to: 5, icon: <MoonOutlined /> },
   { value: 'morning', label: 'Buổi sáng', range: '06:00 – 12:00', from: 6, to: 11, icon: <SunOutlined /> },
@@ -417,11 +432,19 @@ export function SearchResults() {
   ];
 
   const pickChips = opts(facets.pick);
+  const art = cityPhoto(to);
 
   return (
     <>
-      <div className="results-top">
+      <div className={`results-top city-hero ${art ? 'has-photo' : ''}`} style={art ? { backgroundImage: `url(/du-lich/${art.img})` } : undefined}>
         <div className="container">
+          {to && (
+            <div className="city-caption">
+              <span className="cc-label">Điểm đến</span>
+              <b>{to}</b>
+              {art?.tagline && <span className="cc-tag">{art.tagline}</span>}
+            </div>
+          )}
           <SearchBar compact initial={{ from, to, date }} />
           <div className="route-sum">
             <span className="rs-icon">
@@ -457,6 +480,11 @@ export function SearchResults() {
               <RightOutlined />
             </button>
           </div>
+          {art?.credit && (
+            <a className="city-credit" href={art.credit.source} target="_blank" rel="noreferrer">
+              Ảnh: {art.credit.author} · {art.credit.license}
+            </a>
+          )}
         </div>
       </div>
 

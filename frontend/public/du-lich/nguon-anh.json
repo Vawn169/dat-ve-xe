@@ -1,0 +1,32 @@
+{
+  "hai-phong.jpg": {
+    "title": "Lan Ha bay jonques.jpg",
+    "author": "Velvet",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lan_Ha_bay_jonques.jpg"
+  },
+  "can-tho.jpg": {
+    "title": "Cau-can-tho-tuonglamphotos.jpg",
+    "author": "Tuong Lam Photos",
+    "license": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cau-can-tho-tuonglamphotos.jpg"
+  },
+  "tp-ho-chi-minh.jpg": {
+    "title": "Saigon at Blue Hour.jpg",
+    "author": "Radek Kucharski",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saigon_at_Blue_Hour.jpg"
+  },
+  "ha-noi.jpg": {
+    "title": "Hanoi - Turtle Tower (Tháp Rùa), Hoàn Kiếm Lake.jpg",
+    "author": "P. Hughes",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hanoi_-_Turtle_Tower_(Th%C3%A1p_R%C3%B9a),_Ho%C3%A0n_Ki%E1%BA%BFm_Lake.jpg"
+  },
+  "vung-tau-lon.jpg": {
+    "title": "Bai Truoc Vung Tau.jpg",
+    "author": "NDTK08",
+    "license": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bai_Truoc_Vung_Tau.jpg"
+  }
+}

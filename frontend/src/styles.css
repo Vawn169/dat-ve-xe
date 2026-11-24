@@ -916,3 +916,31 @@ h1, h2, h3 { letter-spacing: -.01em; }
   .kpi > span { padding-right: 36px; }
 }
 .seat-summary .hold-timer { display: none; }
+
+/* ---- Ảnh nền thành phố đến ở đầu trang kết quả (giống trang chủ) ---- */
+.city-hero { position: relative; isolation: isolate; padding: 28px 0 22px; background: linear-gradient(180deg, #e9f8f1 0%, var(--surface) 100%); }
+.city-hero.has-photo { background-size: cover; background-position: center 45%; padding: 96px 0 40px; animation: city-in .7s ease-out; }
+.city-hero.has-photo::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(6, 30, 24, .38) 0%, rgba(6, 30, 24, .18) 35%, rgba(6, 30, 24, .62) 100%);
+}
+.city-hero > .container { position: relative; }
+.city-caption { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+.city-caption .cc-label { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.city-caption b { font-size: clamp(24px, 3.4vw, 36px); line-height: 1.15; color: var(--primary-dark); letter-spacing: -.01em; }
+.city-caption .cc-tag { font-size: 15px; color: var(--text); }
+.has-photo .city-caption .cc-label { color: rgba(255, 255, 255, .8); }
+.has-photo .city-caption b { color: #fff; text-shadow: 0 2px 16px rgba(0, 0, 0, .4); }
+.has-photo .city-caption .cc-tag { color: #fde68a; font-weight: 600; background: rgba(6, 30, 24, .55); backdrop-filter: blur(3px); padding: 3px 12px; border-radius: 999px; }
+.has-photo .city-caption .cc-label { background: rgba(6, 30, 24, .55); padding: 3px 10px; border-radius: 999px; }
+.has-photo .search-bar, .has-photo .route-sum { box-shadow: 0 12px 34px rgba(0, 0, 0, .25); }
+.has-photo .ds-day:not(.on), .has-photo .ds-arrow { background: rgba(255, 255, 255, .94); }
+.city-credit { display: block; text-align: right; margin-top: 8px; font-size: 11px; color: rgba(255, 255, 255, .75); }
+.city-credit:hover { color: #fff; }
+@keyframes city-in { from { background-position: center 52%; } to { background-position: center 45%; } }
+@media (prefers-reduced-motion: reduce) { .city-hero.has-photo { animation: none; } }
+@media (max-width: 720px) {
+  .city-hero.has-photo { padding: 64px 0 22px; }
+  .city-caption { margin-bottom: 12px; }
+  .city-caption .cc-tag { font-size: 13px; flex-basis: 100%; }
+}
